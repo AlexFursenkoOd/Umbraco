@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "../Master.cshtml";
+}
+<section class='col-sm-6'>@Umbraco.Field("description", altFieldAlias: "aboutUs")</section>
+<img class='col-sm-4' src='@Umbraco.Media(Int32.Parse(Umbraco.Field("image").ToString())).Url' />
+<div class="jumbotron col-sm-12"><h1>Custom view rendered from Custom controller</h1></div>
+

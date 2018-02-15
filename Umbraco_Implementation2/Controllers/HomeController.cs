@@ -12,8 +12,12 @@ namespace Umbraco_Implementation2.Controllers
         public override ActionResult Index(RenderModel model)
         {
             //Do some stuff here, then return the base method
-            var a = 2;
-            return base.Index(model);
+            
+            var property = model.Content.GetProperty("testField");
+            int axis;
+            var success = Int32.TryParse(property.Value.ToString(), out axis);
+            ViewBag.Axis = success ? axis : 100;
+            return View("Index", model);
         }
 
     }

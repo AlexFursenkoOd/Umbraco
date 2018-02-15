@@ -4,3 +4,4 @@
 @{
 	Layout = "Master.cshtml";
 }
+<img class='col-sm-12' src='@Umbraco.Media(Int32.Parse(Umbraco.Field("image").ToString())).Url'/>

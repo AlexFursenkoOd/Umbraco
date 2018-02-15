@@ -804,6 +804,9 @@ Terratype.TerratypePropertyEditor, Terratype, Version=1.0.13.0, Culture=neutral,
 Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.6614.16975, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.6614.16975, Culture=neutral, PublicKeyToken=null
 
+Umbraco.Core.Deploy.IServiceConnector
+
+
 Umbraco.Web.Trees.TreeController
 Umbraco.Web.Trees.TreeAttribute
 Umbraco.Web.Trees.MacroTreeController, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
@@ -921,9 +924,6 @@ umbraco.businesslogic.UsersApplicationDefinition, businesslogic, Version=1.0.661
 umbraco.businesslogic.MembersApplicationDefinition, businesslogic, Version=1.0.6614.16984, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.TranslationApplicationDefinition, businesslogic, Version=1.0.6614.16984, Culture=neutral, PublicKeyToken=null
 
-Umbraco.Core.Deploy.IServiceConnector
-
-
 umbraco.interfaces.ICacheRefresher
 
 Umbraco.Forms.Core.Cache.PreValueCacheRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
@@ -952,4 +952,10 @@ Umbraco.Web.Cache.TemplateCacheRefresher, umbraco, Version=1.0.6614.16987, Cultu
 Umbraco.Web.Cache.UnpublishedPageCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserGroupPermissionsCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+
+Umbraco.Web.Editors.IEditorValidator
+
+Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
 
