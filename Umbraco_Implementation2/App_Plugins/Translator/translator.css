@@ -1,0 +1,89 @@
+﻿.translation-table-head {
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.translation-table-row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.translation-table-cell {
+    margin: 1em;
+    max-width: 90%;
+    flex-grow: 1;
+    display: flex;
+}
+
+.translation-table-cell {
+    width: 80%;
+    flex-grow: 10;
+    flex-wrap: wrap;
+}
+
+    .translation-table-cell div {
+        flex-grow: 1;
+    }
+
+.translation-table-row .translation-table-cell:first-child {
+    padding: 0 1em;
+    width: 140px;
+    font-weight: bold;
+    text-align: right;
+    flex-grow: 2;
+}
+
+.translation-value-row {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin: 0.5em 0;
+}
+
+.translation-value-cell {
+    padding: 0 1em;
+    flex-grow: 1;
+    width: 50%;
+}
+
+    .translation-value-cell small {
+        margin-bottom: 0.3em;
+        display: inline-block;
+        color: #777;
+    }
+
+    .translation-value-cell .translate-buttons {
+        margin: 0.5em 0;
+        text-align: right;
+    }
+
+.translation-target {
+    border-bottom: 1px solid #ddd;
+    margin: 0.2em 0;
+}
+
+.translation-value-cell .umb-textstring {
+    width: 100%;
+}
+
+.value-translated {
+    background-color: #F1F8E9;
+}
+
+.translator-status-Updated {
+    background-color: #F1F8E9;
+}
+
+.access-users-list {
+    margin: 2em 0;
+}
+
+    .access-users-list > div {
+        margin: 1em;
+    }
+
+
+.translator-status-Reviewing {
+    background-color: #f4f4f4;
+}

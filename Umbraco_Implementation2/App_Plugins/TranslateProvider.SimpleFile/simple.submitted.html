@@ -1,0 +1,30 @@
+<div ng-controller="translate.simpleProviderController as vm">
+    <div class="provider-setting-item">
+        <strong>File Format</strong> : {{vm.properties.format}}
+    </div>
+    <div class="provider-setting-item">
+        <strong>Translation File</strong> : <a href="{{vm.properties.fileLocation}}" target="_blank" class="btn btn-success">Download File</a> 
+        <em>{{vm.properties.fileLocation}}</em>
+    </div>
+    <hr />
+    <div class="provider-setting-item form-horizontal">
+        <umb-control-group label="File" description="File to upload">
+
+            <input type="file" umb-file-upload
+                   ngf-select=""
+                   accept=".xml,.xliff"
+                   ng-model="vm.files"
+                   ngf-multiple="false"
+                   ngf-change="vm.fileSelected(vm.files)" />
+
+
+            <umb-button action="vm.uploadFile()"
+                        type="button"
+                        button-style="info"
+                        state="vm.uploadButtonState"
+                        label-key="translate_upload"
+                        disabled="vm.file === undefined">
+            </umb-button>
+        </umb-control-group>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (UK)" localName="English (UK)" lcid="" culture="en-GB">
+  <creator>
+    <name>Jumoo</name>
+    <link>http://jumoo.uk</link>
+  </creator>
+  <area alias="sections">
+    <key alias="translator">Translator</key>
+  </area>
+  <area alias="translator">
+    <key alias="property">Property</key>
+    <key alias="source">Source</key>
+    <key alias="translated">Translated</key>
+    <key alias="awaiting">Awaiting translation</key>
+    <key alias="return">Return translations</key>
+
+    <key alias="returned">Job returned to site</key>
+
+    <key alias="from">From</key>
+    <key alias="to">To</key>
+    <key alias="pages">Pages</key>
+    <key alias="valuesTranslated">Values / Translated</key>
+
+    <key alias="noJobs">
+      <![CDATA[
+        <h5>No Jobs</h5>
+        <p>There are no jobs for this language
+      ]]>
+    </key>
+
+    <key alias="authusers">
+      <![CDATA[
+        <h4>Authorized Users</h4>
+        <small>Administrator users will get access automatically</small>
+       ]]>
+    </key>
+
+    <key alias="users">Umbraco Users</key>
+    <key alias="permissionsSaved">Permissions updated saved</key>
+  </area>
+</language>

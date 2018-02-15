@@ -1,0 +1,38 @@
+﻿<div ng-controller="translate.ProviderConfigController as vm">
+    <form name="providerConfig" novalidate>
+        <umb-editor-view>
+            <umb-editor-header
+                               name="vm.page.title"
+                               name-locked="true"
+                               hide-icon="true"
+                               hide-alias="true"
+                               description="vm.page.description"
+                               description-locked="true">
+
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <div ng-if="vm.hasView">
+                        <div ng-include="vm.provider.Views.Config"></div>
+                    </div>
+                    <div ng-if="!vm.hasView">
+                        <umb-empty-state position="center">
+                            <h5>No Config</h5>
+                            <p>
+                                This provider has no config.
+                            </p>
+                        </umb-empty-state>
+                    </div>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-right>
+                    <button class="btn btn-success" ng-click="vm.save()">
+                        <localize key="buttons_save">Save</localize>
+                    </button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+
+        </umb-editor-view>
+    </form>
+</div>

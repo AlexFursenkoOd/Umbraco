@@ -1,0 +1,77 @@
+<div class="translate-job-view">
+    <umb-load-indicator ng-hide="loaded"></umb-load-indicator>
+    <div ng-show="loaded">
+        <div ng-if="results.TotalItems > 0">
+            <div class="umb-table">
+                <div class="umb-table-head">
+                    <div class="umb-table-row">
+                        <div class="umb-table-cell">
+                            <i class="umb-table-body__icon umb-table-body__fileicon icon-document"></i>
+                        </div>
+
+                        <div class="umb-table-cell umb-table__name"><localize key="general_name">Name</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_source">Source</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_target">Target</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_provider">Provider</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_nodes">Nodes</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_status">Status</localize></div>
+                        <div class="umb-table-cell"><localize key="general_date">Date</localize></div>
+                    </div>
+                </div>
+                <div class="umb-table-body">
+                    <div ng-repeat="job in results.Items" class="umb-table-row job-status-{{job.Status}}"
+                         ng-class="{'-selected':item.selected}"
+                         ng-click="viewJob(job.Id)">
+                        <div class="umb-table-cell" ng-switch="job.Status">
+                            <i ng-switch-when="Error" class="umb-table-body__icon umb-table-body__fileicon icon-wrong color-red"></i>
+                            <i ng-switch-when="Closed" class="umb-table-body__icon umb-table-body__fileicon icon-checkbox-dotted"></i>
+                            <i ng-switch-when="Accepted" class="umb-table-body__icon umb-table-body__fileicon icon-checkbox color-green"></i>
+
+                            <i ng-switch-default class="umb-table-body__icon umb-table-body__fileicon icon-document"></i>
+                        </div>
+
+
+                        <div class="umb-table-cell umb-table__name">{{job.Name}}</div>
+                        <div class="umb-table-cell">{{job.SourceCulture.DisplayName}}</div>
+                        <div class="umb-table-cell">{{job.TargetCulture.DisplayName}}</div>
+                        <div class="umb-table-cell">{{job.ProviderName}}</div>
+                        <div class="umb-table-cell">{{job.NodeCount}}</div>
+                        <div class="umb-table-cell">{{showStatus(job)}}</div>
+                        <div class="umb-table-cell">
+                            <div ng-switch="job.Status">
+                                <div ng-switch-when="Submitted">
+                                    {{job.Submitted | date: 'medium' }}
+                                </div>
+                                <div ng-switch-when="Received">
+                                    {{job.Received | date: 'medium' }}
+                                </div>
+                                <div ng-switch-default>
+                                    {{job.Created | date: 'medium' }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <umb-pagination page-number="results.CurrentPage"
+                            total-pages="results.TotalPages"
+                            on-next="nextPage"
+                            on-prev="prevPage"
+                            on-go-to-page="goToPage">
+            </umb-pagination>
+
+        </div>
+        <div ng-show="results.TotalItems == 0">
+            <umb-empty-state position="center">
+                <h5>No Jobs</h5>
+                <p>
+                    There are no jobs for this language
+                </p>
+            </umb-empty-state>
+        </div>
+
+    </div>
+
+
+</div>

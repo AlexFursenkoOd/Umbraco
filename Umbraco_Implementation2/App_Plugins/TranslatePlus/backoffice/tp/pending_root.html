@@ -1,0 +1,56 @@
+<div ng-controller="translate.pendingRootController as vm"
+    class="translatePlus">
+
+    <form name="pendingRoot" novalidate>
+        <umb-editor-view>
+            <umb-editor-header
+                name="vm.pageTitle"
+                hide-alias = "true"
+                hide-icon = "true"
+                name-locked = "true"
+                hide-description = "true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <translate-app-status></translate-app-status>
+
+                    <h4>Pending Translations</h4>
+                    <p>
+                        This section contains items that have been 
+                        sent to translation from within Umbraco. 
+                    </p>
+                    <p>
+                        From here you can create translation jobs, and submit
+                        them to your chosen translation provider.
+                    </p>
+                    
+                    <umb-load-indicator ng-hide="vm.loaded"></umb-load-indicator>
+                    <div class="summary-boxes" ng-if="vm.loaded">
+                        <div ng-repeat="item in vm.open"
+                            class="summary-box"
+                             ng-class="{'summary-faded' : item.Count == 0}">
+                            <h4>{{item.DisplayName}}</h4>
+                            <div>
+                                <strong>{{item.Count}}</strong> items
+                                <div>
+                                    <a class="btn btn-default" href="#/translatePlus/tp/pending/{{item.Id}}">
+                                        View
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+            </umb-editor-footer>
+        </umb-editor-view>
+
+    </form>
+
+</div>

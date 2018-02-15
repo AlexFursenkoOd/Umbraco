@@ -1,0 +1,31 @@
+﻿<div class="translator translatePlus" ng-controller="translatorDashboard.controller as vm">
+
+    <translate-app-status></translate-app-status>
+    
+    <h2 class="page-header">
+        Translator
+        <small>
+            Jobs awaiting translation
+        </small>
+    </h2>
+
+    <umb-load-indicator ng-hide="vm.loaded"></umb-load-indicator>
+
+    <div class="summary-boxes" ng-if="vm.loaded">
+        <div ng-repeat="item in vm.counts track by $index"
+             class="summary-box"
+             ng-class="{'summary-faded' : item.Count == 0}">
+            <h4>{{item.Name}}</h4>
+            <div>
+                <strong>{{item.Count}}</strong> 
+                Job<span ng-if="item.Count != 1">s</span>
+                <div>
+                    <a class="btn btn-default"
+                       href="#/translator/translator/lang/{{item.CultureID}}">View</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

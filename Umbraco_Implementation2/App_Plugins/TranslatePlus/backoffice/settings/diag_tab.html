@@ -1,0 +1,25 @@
+﻿<div class="page-header">
+    <small>
+        Translation Manager - Diagnostic Information
+    </small>
+
+    <h2>Core Version : {{vm.info.CoreVersion}}</h2>
+
+    <div>
+        <h3>Providers</h3>
+        <ul>
+            <li ng-repeat="provider in vm.info.Providers">
+                {{provider.Name}} <em>{{provider.Alias}} [{{provider.Enabled}}]</em> 
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Mappers</h3>
+        <ul>
+            <li ng-repeat="mapper in vm.info.Mappers">
+                <strong>{{mapper.Editor}}</strong> -> {{mapper.Name}}
+            </li>
+        </ul>
+    </div>
+</div>

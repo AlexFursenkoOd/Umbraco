@@ -1,0 +1,178 @@
+﻿<div ng-controller="translate.itemViewController as vm" class="translatePlus">
+    <form name="item" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.page.title"
+                               description="vm.page.description"
+                               description-locked="true"
+                               hide-alias="true"
+                               name-locked="true"
+                               hide-icon="true">
+            </umb-editor-header>
+            <umb-editor-container>
+
+                <div ng-show="vm.hasOpenNode()" class="alert alert-warning">
+                    <i class="icon icon-alert"></i>
+                    <localize key="translate_opennode">
+                        There is an open translation for this item, applying the
+                        translations contained in this item may result in out of
+                        date content.
+                    </localize>
+                </div>
+
+                <div class="node-box item-detail">
+                    <div>
+                        <strong><localize key="translate_source">Source</localize></strong> {{vm.item.MasterNodeName}}
+                        [<a href="#/content/content/edit/{{vm.item.MasterNodeId}}" target="_blank">edit</a>]
+                        <div><small>{{vm.item.MasterNodePath}}</small></div>
+                    </div>
+                    <div>
+                        <strong>Target</strong> {{vm.item.TargetNodeName}}
+                        [<a href="#/content/content/edit/{{vm.item.TargetNodeId}}" target="_blank">edit</a>]
+                        <div><small>{{vm.item.TargetNodePath}}</small></div>
+                    </div>
+                </div>
+                <div class="node-box item-status">
+                    <div class="node-status-box-{{vm.item.Status}}">
+                        <strong><localize key="translate_status">Status</localize></strong>
+                        {{vm.item.Status}}
+                    </div>
+
+                    <div>
+                        <strong><localize key="content_createDate">Created</localize></strong>
+                        {{vm.item.Created | date: 'medium'}}
+                    </div>
+                    <div>
+                        <strong><localize key="translate_updated">Updated</localize></strong>
+                        {{vm.item.Updated | date: 'medium'}}
+                    </div>
+                </div>
+
+                <hr />
+
+                <ul class="nav nav-tabs">
+                    <li ng-repeat="(key, group) in vm.item.Groups"
+                        ng-class="{'active': key == 0}">
+                        <a href="#tab_{{group.Name}}" data-toggle="tab">{{group.DisplayName}}</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div ng-repeat="(key, group) in vm.item.Groups"
+                         class="tab-pane" id="tab_{{group.Name}}"
+                         ng-class="{'active': key == 0}">
+
+                        <div class="item-detail-view">
+                            <div class="item-detail-row item-detail-row-header">
+                                <div><localize key="translate_source"></localize></div>
+                                <div>
+                                    <div ng-if="vm.item.Status == 'Open' || vm.item.Status == 'InProgress'">
+                                        <localize key="translate_current">Current</localize>
+                                    </div>
+                                    <div ng-if="vm.item.Status != 'Open' && vm.item.Status != 'InProgress'">
+                                        Target
+                                    </div>
+                                </div>
+                                <div class="actions">&nbsp;</div>
+                            </div>
+
+
+                            <div ng-repeat="property in group.Properties"
+                                 class="item-detail-row">
+
+                                <div>
+                                    <!-- <h4>{{property.Alias}}</h4> -->
+                                    <div ng-include="'sourceProperty'"
+                                         ng-init="source=property.Source"></div>
+                                </div>
+                                <div>
+                                    <!-- <h4>{{property.Alias}}</h4> -->
+                                    <div ng-include="'targetProperty'"
+                                         ng-init="target=property.Target"></div>
+                                </div>
+                                <div class="actions property-buttons">
+                                    <!-- permissions or settings - you should be able to turn these off..-->
+                                    <div>
+                                        <div ng-show="vm.item.Status == 'Open'">
+                                            <button ng-click="vm.removeProperty(property)" class="btn btn-danger btn-small">
+                                                <localize key="general_remove">Remove</localize>
+                                            </button>
+                                        </div>
+                                        <div ng-if="vm.item.Status == 'Reviewing'">
+                                            <div ng-show="!property.edit">
+                                                <button ng-click="vm.removeProperty(property)" class="btn btn-danger btn-small">
+                                                    <localize key="general_remove">Remove</localize>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-left>
+                    <a href="javascript: window.history.back();"
+                       class="btn btn-info">
+                        <localize key="general_back">Back</localize>
+                    </a>
+                </umb-editor-footer-content-left>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+
+    <!-- item templates - for recusing in to show the actual values at the bottom of the trees -->
+    <script type="text/ng-template" id="sourceProperty">
+        <div ng-if="!vm.hasChildren(source)">
+            <h4>{{source.DisplayName}}</h4>
+            <div class="translate-item-value">
+                <div ng-if="source.Value || source.Value.length > 0" ng-bind-html="source.Value"></div>
+                <div ng-if="!source.Value || source.Value.length == 0">
+                    (Blank)
+                </div>
+                <small><em>{{source.Id}} {{source.AdditionalSettings}} (html: {{source.HtmlControl}})</em></small>
+            </div>
+        </div>
+
+        <div ng-if="vm.hasChildren(source)">
+            <div ng-repeat="source in source.InnerValues" ng-include="'sourceProperty'" class="translate-item-property-box">
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="targetProperty">
+        <div ng-if="!vm.hasChildren(target)">
+            <h4>{{target.DisplayName}}</h4>
+            <div class="translate-item-value">
+                <span class="translate-value-edit-button" ng-if="vm.item.Status == 'Reviewing'">
+                    <i ng-if="!target.edit" class="icon icon-edit"
+                       ng-click="vm.flipEdit(target)"></i>
+                    <span ng-if="target.edit">
+                        <i class="icon icon-check color-green"
+                           ng-click="vm.saveProperty(vm.item, property, target)"></i>
+                        <i class="icon icon-wrong color-red"
+                           ng-click="vm.flipEdit(target)"></i>
+                    </span>
+                </span>
+                <div ng-if="!target.Value || target.Value.length == 0">
+                    (Blank)
+                </div>
+                <div ng-if="target.Value.length > 0">
+                    <div ng-bind-html="target.Value" ng-hide="target.edit"></div>
+                    <div ng-if="target.edit">
+                        <textarea class="property-edit" ng-model="target.Value" style="width:100%;height:150px"></textarea>
+                    </div>
+                </div>
+                <small><em>{{target.Id}} {{target.AdditionalSettings}} (html: {{target.HtmlControl}})</em></small>
+
+            </div>
+        </div>
+
+        <div ng-if="vm.hasChildren(target)">
+            <div ng-repeat="target in target.InnerValues" ng-include="'targetProperty'" class="translate-item-property-box"></div>
+        </div>
+    </script>
+
+
+</div>

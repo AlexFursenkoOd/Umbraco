@@ -96,6 +96,22 @@
       <HintPath>..\packages\UmbracoCms.Core.7.8.1\lib\net45\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Jumoo.TranslatePlus.Core, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JumooTranslate.Core.1.1.5\lib\net45\Jumoo.TranslatePlus.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jumoo.TranslatePlus.Providers.SimpleFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JumooTranslate.Providers.SimpleFile.1.1.2\lib\net45\Jumoo.TranslatePlus.Providers.SimpleFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jumoo.TranslatePlus.Translator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JumooTranslate.Translator.1.1.4\lib\net45\Jumoo.TranslatePlus.Translator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jumoo.XliffLib, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JumooTranslate.Core.1.1.5\lib\net45\Jumoo.XliffLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.8.1\lib\net45\log4net.dll</HintPath>
       <Private>True</Private>
@@ -334,8 +350,118 @@
       <HintPath>..\packages\UmbracoCms.Core.7.8.1\lib\net45\UmbracoExamine.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xliff.OM, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xliff.OM.1.0.2.0\lib\portable-net45+sl50+win+wpa81+wp80\Xliff.OM.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\TranslatePlus\backoffice\defaultRouteController.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\dialogs\sendToTranslate.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\dialogs\sendToTranslate.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\providerConfig.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\create.controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\create.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\createSet.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\delete.controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\delete.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\dictionary.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\dictionary.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\provider.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\providerConfig.controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\providers.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\setEdit.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\setEdit.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\sets.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\settings.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\sets\settings.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\settings\diag_tab.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\settings\licence_tab.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\settings\notify_tab.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\settings\settings_tab.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\archive.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\archive.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\archive_root.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\archive_root.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\item.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\item.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\job.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\job.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\pending.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\pending.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\pending_root.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\pending_root.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\received.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\received.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\received_root.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\received_root.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\submitted.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\submitted.html" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\submitted_root.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\backoffice\tp\submitted_root.html" />
+    <Content Include="App_Plugins\TranslatePlus\dashboard.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\dashboard.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\buildStatus.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\fileupload.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\ItemView.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\ItemView.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\jobSetup.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\jobSetup.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\jobView.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\jobView.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\provider.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\providerPicker.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\providerview.Directive.js" />
+    <Content Include="App_Plugins\TranslatePlus\directives\providerView.html" />
+    <Content Include="App_Plugins\TranslatePlus\directives\status.html" />
+    <Content Include="App_Plugins\TranslatePlus\emails\approved.html" />
+    <Content Include="App_Plugins\TranslatePlus\emails\pending.html" />
+    <Content Include="App_Plugins\TranslatePlus\emails\received.html" />
+    <Content Include="App_Plugins\TranslatePlus\emails\submitted.html" />
+    <Content Include="App_Plugins\TranslatePlus\install.ascx" />
+    <Content Include="App_Plugins\TranslatePlus\lang\en-US.xml" />
+    <Content Include="App_Plugins\TranslatePlus\lang\en.xml" />
+    <Content Include="App_Plugins\TranslatePlus\libs\jquery.signalR.min.js" />
+    <Content Include="App_Plugins\TranslatePlus\libs\ng-file-upload-all.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\cultureService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\dictionaryService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\fileUploadService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\jobService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\nodeService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\providerService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\setService.js" />
+    <Content Include="App_Plugins\TranslatePlus\services\settingsService.js" />
+    <Content Include="App_Plugins\TranslatePlus\sitepicker\picker.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\sitepicker\picker.html" />
+    <Content Include="App_Plugins\TranslatePlus\sitepicker\pickerDialog.Controller.js" />
+    <Content Include="App_Plugins\TranslatePlus\sitepicker\sitepicker_dialog.html" />
+    <Content Include="App_Plugins\TranslatePlus\translate.css" />
+    <Content Include="App_Plugins\TranslatePlus\translateHub.js" />
+    <Content Include="App_Plugins\TranslatePlus\translateplus.1.1.5.js" />
+    <Content Include="App_Plugins\TranslatePlus\translateplus.css" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\config.html" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\sent.html" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\simple.html" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\simple.submitted.html" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\simpleProvider.Controller.js" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\access.Controller.js" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\access.html" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\detail.Controller.js" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\detail.html" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\job.Controller.js" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\job.html" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\lang.Controller.js" />
+    <Content Include="App_Plugins\Translator\backoffice\translator\lang.html" />
+    <Content Include="App_Plugins\Translator\dashboard.controller.js" />
+    <Content Include="App_Plugins\Translator\lang\en-us.xml" />
+    <Content Include="App_Plugins\Translator\lang\en.xml" />
+    <Content Include="App_Plugins\Translator\provider\config.html" />
+    <Content Include="App_Plugins\Translator\provider\providerView.controller.js" />
+    <Content Include="App_Plugins\Translator\provider\submitted.html" />
+    <Content Include="App_Plugins\Translator\services\langUserService.js" />
+    <Content Include="App_Plugins\Translator\services\translatorService.js" />
+    <Content Include="App_Plugins\Translator\translator.css" />
+    <Content Include="App_Plugins\Translator\translatorDashboard.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -573,13 +699,17 @@
     <Content Include="Views\Partials\Navigation\TopNavigation.cshtml" />
     <Content Include="Views\Partials\CategoryLinks.cshtml" />
     <Content Include="Views\Partials\SectionHeader.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="config\Translations.config" />
+    <Content Include="App_Plugins\TranslatePlus\package.manifest" />
+    <Content Include="App_Plugins\TranslateProvider.SimpleFile\package.manifest" />
+    <Content Include="App_Plugins\Translator\package.manifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="XLIFF 2.0 Class Guide.chm" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\ced954d1-8c0f-4abe-bdda-99e7a787d052\package.xml" />

@@ -1,0 +1,25 @@
+﻿<div class="page-header">
+    <small>
+        Define who will get an email when key events occur (';' seperated lists)
+    </small>
+</div>
+<umb-control-group label="Pending Notifications"
+                   description="Email addresses to notify">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Notify.Pending" />
+</umb-control-group>
+<umb-control-group label="Submitted Notifications"
+                   description="Email addresses to notify">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Notify.Submitted" />
+</umb-control-group>
+<umb-control-group label="Received Notifications"
+                   description="Email addresses to notify">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Notify.Received" />
+</umb-control-group>
+<umb-control-group label="Approved Notifications"
+                   description="Email addresses to notify">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Notify.Approved" />
+</umb-control-group>

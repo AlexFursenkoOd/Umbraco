@@ -1,0 +1,51 @@
+﻿<div class="translator access-dialog" 
+     ng-controller="translatorAccess.Controller as vm">
+    <div vlass="umb-dialog-body">
+        <div class="umb-pane">
+            <p>
+                Select which users can access translations for this language
+            </p>
+
+            <hr />
+
+            <div class="control-group">
+                <label for="userList" class="control-label">
+                    <localize key="translator_users">Umbraco Users</localize>
+                </label>
+                <div class="controls">
+
+                    <select class="umb-dropdown umb-editor"
+                            name="jobProvider"
+                            ng-model="vm.selectedUser"
+                            ng-options="i as i.Name for i in vm.users"></select>
+                </div>
+
+                <button class="btn btn-success" ng-click="vm.addUser()">
+                    <localize key="general_add">Add</localize>
+                </button>
+            </div>
+
+            <div class="access-users-list">
+                <localize key="translator_authusers">
+                    <h4>Authorized Users</h4>
+                    <small>Administrator users will get access automatically</small>
+                </localize>
+                <div ng-repeat="user in vm.authusers">
+                    <i class="icon icon-user"></i>
+                    <strong>{{vm.showUsername(user)}}</strong>
+                    <a href ng-click="vm.remove($index)"><i class="icon icon-wrong color-red"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="umb-dialog-footer btn-toolbar umb-btn-toolbar" ng-hide="vm.success">
+        <a class="btn btn-link" ng-click="nav.hideDialog()" ng-if="!vm.busy">
+            <localize key="general_cancel">Cancel</localize>
+        </a>
+        <button class="btn btn-primary" ng-click="vm.save()" ng-disabled="vm.busy">
+            <localize key="buttons_save">Save</localize>
+        </button>
+    </div>
+
+</div>

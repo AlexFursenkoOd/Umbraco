@@ -1,0 +1,142 @@
+﻿<div ng-controller="translate.detailController as vm">
+    <form name="translatorDetail" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.page.title"
+                               description="vm.page.description"
+                               hide-alias="true"
+                               hide-icon="true"
+                               name-locked="true"
+                               description-locked="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <umb-load-indicator ng-hide="vm.loaded"></umb-load-indicator>
+                <div class="umb-pane" ng-show="vm.loaded">
+                    <div ng-if="!vm.node.editable" class="alert alert-info">
+                        This content has been submitted back from translation and cannot be edited here
+                    </div>
+
+                    <ul class="nav nav-tabs">
+                        <li ng-repeat="(key, group) in vm.node.Groups"
+                            ng-class="{'active': key == 0}">
+                            <a href="#tab_{{group.Name}}" data-toggle="tab">{{group.DisplayName}}</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div ng-repeat="(key, group) in vm.node.Groups"
+                             class="tab-pane" id="tab_{{group.Name}}"
+                             ng-class="{'active': key == 0}">
+
+
+                            <div class="translation-table">
+                                <div class="translation-table-head">
+                                    <div class="translation-table-row">
+                                        <div class="translation-table-cell">
+                                            <localize key="translator_property">property</localize>
+                                        </div>
+                                        <div class="translation-table-cell">
+                                            <div class="translation-value-row">
+                                                <div class="translation-value-cell">
+                                                    <localize key="translator_source">Source</localize>
+                                                </div>
+                                                <div class="translation-value-cell">
+                                                    <localize key="translator_translated">Translated</localize>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="translation-table-body">
+                                    <div class="translation-table-row"
+                                         ng-repeat="property in group.Properties">
+                                        <div class="translation-table-cell">
+                                            <h5>{{property.Alias}}</h5>
+                                        </div>
+                                        <div class="translation-table-cell">
+                                            <div ng-include="'translatorProperties'"
+                                                 ng-init="source=property.Source;target=property.Target">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-left>
+                    <button class="btn btn-danger" ng-click="vm.cancelAll()">
+                        Cancel
+                    </button>
+                </umb-editor-footer-content-left>
+                <umb-editor-footer-content-right>
+                    <button class="btn btn-success" ng-click="vm.saveAll()" ng-if="vm.node.editable">
+                        Submit
+                    </button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+
+
+    <script type="text/ng-template" id="translatorProperties">
+        <div class="translation-value-row" ng-if="vm.isValue(source)">
+            <div class="translation-value-cell">
+                <small><em>{{source.DisplayName}}</em></small>
+                <div ng-if="source.Value">
+                    <div ng-bind-html="source.Value" ng-class="{'html-source': source.HtmlControl}"></div>
+                </div>
+                <div ng-if="!source.Value">
+                    <em>(blank)</em>
+                </div>
+            </div>
+
+            <div class="translation-value-cell">
+                <small><em>{{target.DisplayName}}</em></small>
+                <div ng-hide="target.editing">
+                    <div ng-if="target.Value" ng-bind-html="target.Value"></div>
+                    <div ng-if="!target.Value"><em>(blank)</em></div>
+                </div>
+                <div ng-show="target.editing">
+                    <div ng-if="target.HtmlControl">
+                        <umb-editor model="target.editor"></umb-editor>
+                    </div>
+                    <div ng-if="!target.HtmlControl">
+                        <textarea ng-model="target.editValue" class="umb-editor umb-textstring"></textarea>
+                    </div>
+
+                </div>
+                <div class="translate-buttons" ng-if="vm.node.editable">
+                    <div ng-switch="target.Translated">
+                        <div ng-switch-when="true" class="color-green">
+                            <i class="icon icon-check"></i>
+                            <localize key="translator_translated">translated</localize>
+                        </div>
+                        <div ng-switch-default class="color-red">
+                            <i class="icon icon-globe"></i>
+                            <localize key="translator_awaiting">awaiting translation</localize>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" ng-click="vm.editValue(target)" ng-hide="target.editing">
+                        <localize key="general_edit">Edit</localize>
+                    </button>
+                    <button class="btn btn-success" ng-click="vm.saveValue(target)" ng-show="target.editing">
+                        <localize key="general_confirm">Set</localize>
+                    </button>
+                    <button class="btn btn-danger" ng-click="vm.cancel(target)" ng-show="target.editing">
+                        <localize key="general_cancel">cancel</localize>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="source.InnerValues">
+            <div ng-repeat="(key, value) in source.InnerValues">
+                <div ng-include="'translatorProperties'"
+                     ng-init="source=value;target=target.InnerValues[key]">
+                </div>
+            </div>
+        </div>
+    </script>
+</div>

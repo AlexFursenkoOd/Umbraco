@@ -1,0 +1,58 @@
+<div ng-controller="translate.setEditController as vm">
+    <form name="setEdit" novalidate class="form-horizontal">
+        <umb-editor-view>
+            <umb-editor-header
+                name="vm.pageTitle"
+                hide-alias="true" 
+                               hide-description="false"
+                               description-locked="true"
+                               description="vm.set.Name"
+                hide-icon="true" name-locked="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <umb-load-indicator ng-hide="vm.loaded"></umb-load-indicator>
+
+                <div class="umb-pane" ng-show="vm.loaded">
+
+                    <div ng-if="vm.circular" class="alert alert-info">
+                        <h5>Circular Set warning</h5>
+                        <p>
+                            One or more of your target sets, are the same node as your master. 
+                        </p>
+                        <p>
+                            This can be ok (if you are using things like vorto) but you should exercise caution, and you 
+                            could translate over the top of the translations if you are not careful.
+                        </p>
+                        <p><strong>Make sure you explicity select your vorto aliases in properties box to ensure only vorto type values are translated. </strong></p>
+                    </div>
+
+                    <div ng-if="!vm.isLicenced" class="alert alert-warning">
+                        <p>
+                            This version of Translation Manager is unlicenced.
+                        </p>
+                        <p>
+                            You will be limited to one set and one target language, for more target languages, <a href="http://jumoo.co.uk/tp/licence/">please purchase a licence.</a>
+                        </p>
+                    </div>
+                    <div ng-repeat="control in vm.controls">
+                        <umb-control-group label="{{control.label}}" description="{{control.description}}">
+                            <umb-property-editor model="control" />
+                        </umb-control-group>
+                    </div>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-right>
+                    <umb-button button-style="success"
+                                label="Save"
+                                type="button"
+                                action="vm.saveSettings()"
+                                disabled="!vm.isComplete()"
+                                >
+                    </umb-button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+</div>
+

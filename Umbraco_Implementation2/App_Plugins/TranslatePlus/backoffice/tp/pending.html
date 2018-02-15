@@ -1,0 +1,67 @@
+﻿<div ng-controller="translate.jobsPendingController as vm"  class="translatePlus">
+    <form name="pendingTranslateForm" novalidate>
+        <umb-editor-view>
+            <umb-editor-header
+                name="vm.pageTitle"
+                hide-alias="true"
+                hide-icon="true"
+                name-locked="true"
+                description="vm.pageDescription"
+                description-locked="true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+                <translate-item-view culture="vm.cultureId"
+                                     status="vm.status"
+                                     selectable="true"
+                                     allow-remove="true"
+                                     selected-items="vm.items">
+                </translate-item-view>
+            </umb-editor-container>
+
+                <div ng-if="vm.items.length > 0" class="provider-picker form-horizontal"
+                     ng-class="{'picker-closed' : !vm.pickerOpen}">
+
+                    <div class="picker-draw">
+                        <div>
+                            <strong ng-if="!vm.pickerOpen">
+                                {{vm.job.Name}} <em>{{vm.job.provider.Name}}</em> : {{vm.items.length}} Items
+                            </strong>
+                        </div>
+                        <a href class="picker-button" ng-click="vm.pickerOpen = !vm.pickerOpen"
+                                title="toggle">
+                            <span ng-if="vm.pickerOpen"><i class="icon-navigation-down"></i></span>
+                            <span ng-if="!vm.pickerOpen"><i class="icon-navigation-up"></i></span>
+                        </a>
+                    </div>
+
+                    
+
+                    <translate-job-setup job="vm.job"
+                                         options="vm.createOptions"
+                                         items="vm.items">
+                    </translate-job-setup>
+
+                    <div class="buttons">
+                        <umb-button button-style="success"
+                                    label="Create translation job"
+                                    label_key="translateActions_createJob"
+                                    type="button"
+                                    action="vm.createAndSubmitJob()"
+                                    state="vm.submitState"
+                                    disabled="vm.submitState === 'busy'">
+                        </umb-button>
+                    </div>
+                </div>
+
+            <umb-editor-footer>
+                <umb-editor-footer-content-right>
+                    <button ng-click="vm.refresh()" class="btn btn-default">
+                        <localize key="actions_refreshNode">Refresh</localize>
+                    </button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+
+</div>

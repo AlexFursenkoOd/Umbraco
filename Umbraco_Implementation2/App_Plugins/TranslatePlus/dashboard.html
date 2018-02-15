@@ -1,0 +1,66 @@
+﻿<div class="translatePlus" ng-controller="translatePlusDashboard.controller as vm">
+    <translate-app-status></translate-app-status>
+
+    <h2 class="page-header">Translation Manager <small ng-bind="vm.info.CoreVersion"></small></h2>
+    <p>
+        Translation Manager helps you manage translations of your content between your sites within Umbraco.
+    </p>
+
+    <div ng-hide="vm.setup">
+        <div class="alert alert-info">
+            <h4>Setup not Complete</h4>
+            <p>
+                You need to create a translation set, so that Umbraco knows where to send translated
+                text to within the CMS.
+            </p>
+            <p>
+                Translation Sets are located in the settings section.
+            </p>
+            <a class="btn btn-success btn-large" href="#/settings/sets/setEdit/-1">Create Translation Set</a>
+        </div>
+    </div>
+
+    <div class="dashboard-blocks">
+
+
+        <div>
+            <div class="dashboard-block-text">
+                <h4>Pending</h4>
+                <p>
+                    Items that have been updated in the master site, which will need
+                    to be translated to the languages in the other sites.
+                </p>
+            </div>
+            <a href="#/translatePlus/tp/pending_root/-101" class="btn btn-info btn-block">View</a>
+        </div>
+        <div>
+            <div class="dashboard-block-text">
+                <h4>Submitted</h4>
+                <p>
+                    Translation jobs that have been submitted for translation. Jobs will wait here
+                    until a translation is received back from the translation service.
+                </p>
+            </div>
+            <a href="#/translatePlus/tp/submitted_root/-102" class="btn btn-info btn-block">View</a>
+        </div>
+        <div>
+            <div class="dashboard-block-text">
+                <h4>Received</h4>
+                <p>
+                    Things that have come back from the translators. From here you can approve and
+                    publish the translations onto the relevant sites in Umbraco.
+                </p>
+            </div>
+            <a href="#/translatePlus/tp/received_root/-103" class="btn btn-info btn-block">View</a>
+        </div>
+        <div>
+            <div class="dashboard-block-text">
+                <h4>Archived</h4>
+                <p>
+                    All your past translation jobs.
+                </p>
+            </div>
+            <a href="#/translatePlus/tp/archive_root/-104" class="btn btn-info btn-block">View</a>
+        </div>
+    </div>
+</div>

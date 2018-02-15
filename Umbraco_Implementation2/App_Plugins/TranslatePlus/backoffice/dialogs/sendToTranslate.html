@@ -1,0 +1,174 @@
+﻿<div ng-controller="translate.sendController as vm" class="translatePlus send-to-translate" ng-cloak>
+    <div class="umb-dialog-body">
+        <div class="umb-pane">
+            <div ng-if="vm.busy">
+                <div class="send-busy-msg">{{vm.update}}</div>
+                <umb-load-indicator></umb-load-indicator>
+            </div>
+
+            <div ng-show="vm.error" class="tp-send-error alert alert-danger">
+                <h4 class="text-error">{{vm.error.errorMsg}}</h4>
+                <p class="text-error">{{vm.error.data.message}}</p>
+            </div> 
+
+            <div ng-if="!vm.busy">
+                <!-- step pick :: pick languages -->
+                <div ng-show="vm.step == 'pick'" class="tp-send-form">
+                    <p class="abstract">
+                        <localize key="translate_sendChoosePrefix">Choose how to translate</localize>
+                        <strong>{{vm.nodeName}}</strong> 
+                        <span ng-show="vm.hasChildren">
+                            <localize key="translate_sendChooseSuffix">and any child nodes</localize>
+                        </span>
+                    </p>
+
+                    <div class="tp-send-sitelist">
+                        <h4><localize key="translate_translateTo">Translate To</localize></h4>
+                        <div ng-repeat="set in vm.sets">
+                            <h5 ng-if="vm.sets.length > 1">{{set.Name}}</h5>
+                            <div ng-repeat="site in set.Sites" class="tp-site-checkbox">
+                                <input type="checkbox" id="chk_{{site.Id}}_{{$index}}"
+                                       ng-model="site.checked" />
+                                <label for="chk_{{site.Id}}_{{$index}}">
+                                    {{site.Culture.DisplayName}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tp-send-include" ng-show="vm.hasChildren">
+                        <h4>
+                            <localize key="translate_include">Pages to include</localize>
+                        </h4>
+                        <div>
+                            <input type="checkbox" ng-model="vm.options.children" id="chkChildren" />
+                            <label for="chkChildren">
+                                <localize key="translate_includeChildren">Include Subpages</localize>
+                            </label>
+                        </div>
+                        <div class="tp-left-pad">
+                            <input type="checkbox" ng-model="vm.options.unpublished" id="chkUnpublished" ng-disabled="!vm.options.children" />
+                            <label for="chkUnpublished" ng-disabled="!vm.options.children">
+                                <localize key="translate_includeUnpublished">Include Unpublished pages</localize>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div ng-if="vm.autoSend">
+                        <h4>
+                            <localize key="translate_createJob">Create Translation Job</localize>
+                        </h4>
+                        <div>
+                            <input type="checkbox" ng-model="vm.userAutoSend" id="chkAutoSend" />
+                            <label for="chkAutoSend">
+                                <localize key="translate_autoSend">Send to translation provider</localize>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- step 'targets' :: fix any target nodes (if they are missing ) -->
+                <div ng-if="vm.step == 'targets'">
+                    <h4>Target Nodes:</h4>
+                    <div ng-repeat="set in vm.sets">
+                        <h5 ng-if="vm.sets.length > 1">{{set.Name}}</h5>
+                        <div class="node-targets node-targets-header">
+                            <span><strong>Language</strong></span>
+                            <span><strong>Target</strong></span>
+                        </div>
+                        <div ng-repeat="site in set.Sites | filter : { checked : true }" class="node-targets">
+                            <span class="site-name">{{site.Culture.DisplayName}}</span>
+                            <span ng-if="site.target.TargetId > 0">
+                                <i class="icon icon-check color-green"></i> {{site.target.TargetName}}
+                            </span>                            
+                            <span ng-if="site.target.TargetId === 0">
+                                <span ng-if="site.target.ParentId === 0"><i class="icon icon-wrong color-red"></i> No Match </span>
+                                <span ng-if="site.target.ParentId > 0"><i class="icon icon-check color-orange"></i> <em>(Parent)</em> {{site.target.ParentName}} </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div ng-if="vm.warning">
+                        <p>&nbsp;</p>
+                        <div ng-if="!vm.mismatch" class="alert alert-warning">
+                            <localize key="translateSend_newPages">
+                                <h3>New Pages</h3>
+                                <p>One or more of the target sites, does not contain a matching page for this content.</p>
+                                <p>Pages will be created on the target site beneath the matching parent page which does exist</p>
+                            </localize>
+                        </div>
+                        <div ng-if="vm.mismatch" class="alert alert-danger">
+                            <localize key="translateSend_missingPages">
+                                <h3>Missing Pages</h3>
+                                <p>There is no matching page or parent page for this content on one or more of the language sites</p>
+                                <p>you need to go up your content tree and push translations from higher up to create the corresponding connection between the sites.</p>
+                            </localize>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- step job ::  create the job -->
+                <div ng-if="vm.step == 'job'">
+
+                    <translate-job-setup job="vm.job"
+                                         options="vm.createOptions"
+                                         items="vm.nodeItems"
+                                         sendto="true">
+                    </translate-job-setup>
+                </div>
+
+                <!-- end :: results -->
+                <div ng-if="vm.step == 'done'">
+                    <div class="alert alert-success tp-send-success">
+                        <h5>
+                            {{vm.nodes.length}}
+                            <localize key="translate_pagesSent">Sent to translation</localize>
+                        </h5>
+                        <div ng-repeat="set in vm.sets">
+                            <div ng-repeat="site in set.Sites | filter : { checked : true }" class="node-targets">
+                                <span class="site-name">{{site.Culture.DisplayName}}</span>
+                                <i class="icon icon-check color-green"></i>
+                            </div>
+                        </div>
+
+                        <p ng-if="vm.nodes.length > 0">
+                            <localize key="translate_sentMsg">The pages have been send to translation</localize>
+                        </p>
+                    </div>
+
+                    <div class="alert alert-success tp-send-success" ng-if="vm.userAutoSend">
+                        <h5>{{vm.jobs.length}} / {{vm.nodeGroups.length}} Translation jobs have been created 
+                            <span class="tp-animate">
+                                <span class="tp-wait-animate" ng-if="vm.jobs.length < vm.nodeGroups.length"></span>
+                            </span></h5>
+                        <a ng-repeat="job in vm.jobs" class="submitted-job"ng-click="vm.navigateToJob(job.Id)" prevent-default href>
+                            <i class="icon icon-check color-green"></i> {{job.Name}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-dialog-footer btn-toolbar umb-btn-toolbar" ng-hide="vm.success">
+
+        <a class="btn btn-link" ng-click="nav.hideDialog()" ng-if="!vm.busy && vm.step != 'done'">
+            <localize key="general_cancel">Cancel</localize>
+        </a>
+        <button class="btn btn-primary" ng-click="nav.hideDialog()" ng-if="vm.step == 'done'" ng-disabled="vm.busy">
+            <localize key="general_ok">OK</localize>
+        </button>
+        <button class="btn btn-info" ng-click="vm.check()" ng-if="vm.step == 'pick'" ng-disabled="vm.busy">
+            <localize key="translate_send">Send</localize>
+        </button>
+        <button class="btn btn-primary" ng-click="vm.approveWarning()" ng-disabled="vm.busy" ng-if="vm.step == 'targets' && !vm.mismatch">
+            <localize key="general_next">Next</localize>
+        </button>
+        <button class="btn btn-primary" ng-click="vm.createNodes()" 
+                ng-disabled="vm.busy || vm.job.provider == null" ng-if="vm.step == 'job' && !vm.mismatch">
+            <localize key="general_submit">Submit</localize>
+        </button>
+    </div>
+</div>
