@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+	var selection = Model.Content.Site().Children()
+						.Where(x => x.IsVisible());
+}
+<ul class="list-group">
+	@foreach(var item in selection){
+	    <a href="@item.Url">
+		    <li class="list-group-item list-group-item-info" style='text-decoration:none; cursor:default;'>
+			    @item.Name
+		    </li>
+		</a>
+	}
+</ul>
+
