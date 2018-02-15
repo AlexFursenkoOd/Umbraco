@@ -4,13 +4,14 @@
 	var selection = Model.Content.Site().Children()
 						.Where(x => x.IsVisible());
 }
-<ul class="list-group">
+<div class="list-group">
 	@foreach(var item in selection){
-	    <a href="@item.Url">
-		    <li class="list-group-item list-group-item-info" style='text-decoration:none; cursor:default;'>
-			    @item.Name
-		    </li>
-		</a>
+	    if(item.Name == "Salesforce"){
+	        <a class="list-group-item list-group-item-info" href="@item.Url">@item.Name</a>
+        }
+        else{
+            <a class="list-group-item" href="@item.Url">@item.Name</a>
+        }
 	}
-</ul>
+</div>
 

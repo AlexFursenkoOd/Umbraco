@@ -14,15 +14,12 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<div class='containter'>
-    <div class='col-sm-12 alert alert-warning'>
-        Text here to take some space in the top of a page
-    </div>
 @Html.Partial("Navigation/CustomTopNavigation")
-<div class='col-sm-2'>
-    @Html.Partial("Navigation/CustomSubNavigation")
-</div>
-<div class='col-sm-10'>
-@RenderBody()
-</div>
+<div class='containter'>
+    <div class='col-sm-2'>
+        @Html.Partial("Navigation/CustomSubNavigation")
+    </div>
+    <div class='col-sm-10'>
+        @RenderBody()
+    </div>
 </div>

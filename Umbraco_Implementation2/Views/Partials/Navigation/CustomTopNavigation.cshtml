@@ -1,6 +1,20 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-<div class='col-sm-12'>
-<a href='/salesforce' class='btn btn-info'>Salesforce</a>
-<a href='/intro' class='btn btn-info'>Intro</a>
-<a href='/umbraco/#/content' class='btn btn-info'>Go to Backoffice</a>
-</div>
+@{
+	var selection = Model.Content.Site().Children()
+						.Where(x => x.IsVisible());
+}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+	@foreach(var item in selection){
+		<li>
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+	<a href='/umbraco/#/content'><button class="btn btn-danger navbar-btn">Go to Backoffice</button></a>
+    </ul>
+  </div>
+</nav>

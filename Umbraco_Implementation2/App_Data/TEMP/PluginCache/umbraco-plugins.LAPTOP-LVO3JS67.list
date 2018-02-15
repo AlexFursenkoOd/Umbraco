@@ -804,9 +804,6 @@ Terratype.TerratypePropertyEditor, Terratype, Version=1.0.13.0, Culture=neutral,
 Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.6614.16975, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.6614.16975, Culture=neutral, PublicKeyToken=null
 
-Umbraco.Core.Deploy.IServiceConnector
-
-
 Umbraco.Web.Trees.TreeController
 Umbraco.Web.Trees.TreeAttribute
 Umbraco.Web.Trees.MacroTreeController, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
@@ -923,4 +920,36 @@ umbraco.businesslogic.DeveloperApplicationDefinition, businesslogic, Version=1.0
 umbraco.businesslogic.UsersApplicationDefinition, businesslogic, Version=1.0.6614.16984, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.MembersApplicationDefinition, businesslogic, Version=1.0.6614.16984, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.TranslationApplicationDefinition, businesslogic, Version=1.0.6614.16984, Culture=neutral, PublicKeyToken=null
+
+Umbraco.Core.Deploy.IServiceConnector
+
+
+umbraco.interfaces.ICacheRefresher
+
+Umbraco.Forms.Core.Cache.PreValueCacheRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Core.Cache.DataSourceCacheRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Core.Cache.WorkflowCacheRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Core.Cache.FormCacheRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Core.Distributed_Calls.FormRefresher, Umbraco.Forms.Core, Version=6.0.6.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.ApplicationCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.ApplicationTreeCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.ContentTypeCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.DataTypeCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.DictionaryCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.DomainCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.LanguageCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.MacroCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.MediaCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.MemberCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.MemberGroupCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.PageCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.PublicAccessCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.RelationTypeCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.UserGroupCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.StylesheetCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.StylesheetPropertyCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.TemplateCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.UnpublishedPageCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.UserCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Cache.UserGroupPermissionsCacheRefresher, umbraco, Version=1.0.6614.16987, Culture=neutral, PublicKeyToken=null
 
