@@ -1,0 +1,110 @@
+﻿<div class="translate-item-view t-item-view">
+    <umb-load-indicator ng-hide="loaded"></umb-load-indicator>
+    <div ng-show="loaded">
+        <div ng-if="results.TotalItems > 0">
+
+            <div class="item-select-count" ng-if="selectable">
+                <div class="item-select-count-display">
+                    <strong>
+                        {{selectedItems.length}} items selected
+                    </strong>
+                </div>
+                <div class="item-select-buttons">
+                    <umb-button action="selectAllItems()"
+                                type="button"
+                                button-style="info"
+                                state="selectAllButtonState"
+                                label-key="translate_selectAll"
+                                disabled="selectAllButtonState == 'busy'">
+                    </umb-button>
+                    <button class="btn btn-default" ng-click="deselectAllItems()" ng-if="selectedItems.length > 0">
+                        <localize key="buttons_clearSelection">Clear</localize>
+                    </button>
+                </div>
+            </div>
+            <div class="umb-table">
+                <div class="umb-table-head">
+                    <div class="umb-table-row">
+                        <div class="umb-table-cell">
+                            <input type="checkbox" ng-model="allSelected" ng-click="selectAll()" ng-show="selectable" />
+                        </div>
+                        <div class="umb-table-cell"><localize key="translate_content">Content</localize></div>
+                        <div class="umb-table-cell umb-table__name"><localize key="translate_target">Target</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_status">Status</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_updated">Updated</localize></div>
+                        <div class="umb-table-cell"><localize key="translate_properties">Properties</localize></div>
+                        <div class="umb-table-cell"></div>
+                    </div>
+                </div>
+                <div class="umb-table-body"> 
+                    <div ng-repeat="item in results.Items" 
+                         class="umb-table-row node-state-{{item.active}}"
+                         ng-class="{'-selected':item.selected, 'has-open-node': hasOpenNode(item), 'not-selectable' : !item.selectable}">
+                        <div class="umb-table-cell">
+                            <div ng-if="item.active">
+                                <input type="checkbox" ng-model="item.selected"
+                                       ng-show="item.selectable && selectable"
+                                       ng-click="selectItem(item)" />
+                                <div ng-show="!item.selectable" ng-switch on="hasOpenNode(item)">
+                                    <i ng-switch-when="true" class="translate-table-icon icon-alert color-yellow" title="Open nodes in translation"></i>
+                                    <i ng-switch-default class="translate-table-icon icon-document-dashed-line color-black"></i>
+                                </div>
+                            </div>
+                            <div ng-if="!item.active">
+                                <i class="translate-table-icon icon-document turquoise"></i>
+                            </div>
+                        </div>
+
+                        <div class="umb-table-cell">{{item.MasterNodeName}}</div>
+                        <div class="umb-table-cell umb-table__name">{{item.TargetNodeName}}</div>
+                        <div class="umb-table-cell node-status-{{item.Status}}">{{item.Status}}</div>
+                        <div class="umb-table-cell">{{item.Updated | date:'medium'}}</div>
+                        <div class="umb-table-cell">
+                            <ul class="unstyled">
+                                <li ng-repeat="group in item.Groups">
+                                    <ul class="unstyled">
+                                        <li ng-repeat="prop in group.Properties">
+                                            <strong>{{group.DisplayName}}</strong> > {{prop.Alias}}
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="umb-table-cell">
+                            <div>
+                                <button class="btn btn-success btn-small" ng-click="viewItem(item)">
+                                    <localize key="general_view">View</localize>
+                                </button>
+                                <button class="btn btn-danger btn-small" ng-click="removeItem(item)" ng-show="allowRemove">
+                                    <localize key="general_remove">Remove</localize>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-all-actions" ng-if="allowRemove">
+                <button ng-click="removeAll()" class="btn btn-danger btn-small">
+                    <localize key="translate_removeAll">Remove All</localize>
+                </button>
+            </div>
+
+            <umb-pagination page-number="results.CurrentPage"
+                            total-pages="results.TotalPages"
+                            on-next="nextPage"
+                            on-prev="prevPage"
+                            on-go-to-page="goToPage">
+            </umb-pagination>
+        </div>
+        <div ng-show="results.TotalItems == 0">
+            <umb-empty-state position="center">
+                <h5>No Items</h5>
+                <p>
+                    There are no items for this language
+                </p>
+            </umb-empty-state>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,344 @@
+﻿.translate-beta-box {
+    padding: 1em;
+    border: 1px solid #FFCDD2;
+    background-color: #FFEBEE;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+
+.translate-beta-box h5 {
+    color: #263238;
+}
+
+.translate-beta-box p {
+    padding-left: 1em;
+}
+
+.translate-beta-box a {
+    font-weight: bold;
+}
+
+.translate-beta-box .beta-buttons {
+    text-align: center;
+}
+
+.tp-editor input:disabled + label {
+    color: #ccc;
+}
+
+.translatePlus .tp-left-pad {
+    padding-left: 20px;
+}
+
+.tp-send-sitelist {
+    margin-bottom: 2em;
+}
+
+.tp-send-form h4 {
+    margin: 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tp-send-form input[type="checkbox"] {
+    margin-left: 10px;
+    margin-top: 0;
+}
+.tp-send-button {
+    text-align: right;
+}
+
+.tp-send-form label {
+}
+
+.tp-send-note textarea {
+    margin-left: 10px;
+    width: 80%;
+    height: 150px;
+    border: 1px solid #ddd;
+    font-size: 100%;
+}
+
+.tp-send-success {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #222;
+}
+
+
+.tp-site-checkbox {
+    margin: 0.4em 0;
+}
+
+.translate-item-view .approved {
+    color: #aaa;
+}
+
+.translatePlus .table td, .translatePlus .table th {
+    padding: 1em;
+}
+
+.translatePlus .table-cell-wrap {
+    flex-wrap: wrap;
+}
+
+.translatePlus .table-cell-wrap small {
+    width: 100%;
+}
+
+
+
+
+.translate-table-icon {
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.translatePlus .umb-table-row.-approved 
+{
+    opacity: 0.4;
+}
+
+.translatePlus .summary-boxes {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.translatePlus .summary-box {
+    width: 20%;
+    min-width: 250px;
+    border: 1px solid #675e7a;
+    margin: 1em;
+}
+
+.translatePlus .summary-faded {
+    opacity: 0.5;
+}
+
+
+    .translatePlus .summary-box h4 {
+        padding: 1em;
+        margin: 0;
+        background-color: #675e7a;
+        color: #fff;
+    }
+
+.translatePlus .summary-box>div {
+    padding: 1em;
+}
+
+.translatePlus .summary-box>div a {
+    margin: 1em 0;
+}
+
+.translatePlus .provider-view {
+    border: 1px solid #eee;
+    padding: 0.2em 0.6em;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin: 1em 0;
+}
+
+.translatePlus .provider-setting-item {
+    margin: 1em;
+}
+
+.translatePlus .provider-picker {
+    margin: 0;
+    border-top: 1px solid #b3afbd;
+}
+
+.translate-job-status-box {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #F5F5F5;
+}
+
+.translate-job-Accepted {
+    background-color: #ada;
+}
+.translate-job-Submitted {
+    background-color: #add;
+}
+.translate-job-Received {
+    background-color: #aad;
+}
+
+.translatePlus .job-dates {
+    display: flex;
+}
+
+.translatePlus .job-dates>div {
+    width: 30%;
+    text-align: center;
+}
+
+.translatePlus .job-status-Closed {
+    opacity: 0.4;
+}
+
+
+
+.translatePlus .property-edit {
+    border: none;
+}
+
+.translatePlus .item-detail, .translatePlus .item-status {
+    display: flex;
+}
+
+.translatePlus .item-detail > div {
+    width: 50%;
+}
+.translatePlus .item-status > div {
+    width: 33%;
+}
+
+.translatePlus .item-status .dates {
+    text-align: center;
+}
+
+
+.translatePlus .dashboard-blocks {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.translatePlus .dashboard-blocks > div {
+    width: 40%;
+    max-width: 250px;
+    background-color: #F2FCFC;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #00BCD4;
+}
+
+.translatePlus .dashboard-block-text {
+    min-height: 130px;
+}
+
+.provider-picker {
+    border-radius: 0;
+    background-color: #fafafa;
+    padding: 1em;
+    border: 1px solid #eee;
+    overflow-x: auto;
+    flex: 1 1.5 100%;
+    min-height: 270px;
+}
+
+.provider-picker label {
+    margin-top: 5px;
+}
+
+.provider-picker .provider-view {
+    background-color: #f0f0f0;
+    border-radius: 0;
+    padding: 1em;
+}
+
+.provider-picker h4 {
+    margin: 0 0 1em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.1em;
+}
+
+.provider-picker .buttons {
+    text-align: right;
+}
+
+.translatePlus .pending-label {
+    float: left;
+    width: 160px;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.translatePlus .pending-items {
+    display: flex;
+    flex-flow:wrap ;
+    margin-left: 180px;
+}
+
+.translatePlus .pending-item {
+    border: 1px solid #E0E0E0;
+    background-color: #F5F5F5;
+    padding: 0.3em 0.4em;
+    border-radius: 4px;
+    margin: 0.1em;
+    color: #263238;
+    font-size: 90%;
+    font-weight: 700;
+}
+
+/* itemView directive styles */
+.translatePlus .item-select-count {
+    padding-bottom: 0.2em;
+    margin: 0.5em 0 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .translatePlus .item-select-count .item-select-count-display {
+        margin-right: 1em;
+        padding: 0.5em 1em;
+        border-right: 1px solid #eee;
+    }
+
+.translatePlus .item-all-actions {
+    text-align: right;
+    padding: 0.5em;
+}
+
+/* send to translate styles */
+.translatePlus .node-targets {
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.node-targets > span {
+    width: 50%;
+}
+
+.translatePlus .node-targets .site-name {
+    font-weight: bold;
+}
+
+.node-targets-header {
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd
+}
+
+.send-to-translate .alert-warning {
+    background-color: #FFECB3;
+    color: #222
+}
+.send-to-translate .alert-danger {
+    background-color: #ef9a9a;
+    color: #222
+}
+
+.pending-item.muted {
+    color: #aaa;
+}
+
+
+
+/* macro support */
+.UMBRACO_MACRO {
+    border: 3px dotted orange;
+    margin: 10px 0;
+    font-weight: 700;
+    padding: 5px 10px 0;
+}
+
+    .UMBRACO_MACRO:before {
+        text-align: center;
+        color: #aaa;
+        content: "Umbraco Macro";
+    }

@@ -1,0 +1,27 @@
+﻿<div ng-controller="translate.simpleProviderController as pvm">
+    <h4>Simple File Provider</h4>
+    <p>
+        The simple file provider saves and reads XLIFF format files to disk.
+    </p>
+    <p>
+        You cna download and upload the files via the back office - within a submitted
+        job, but you can just copy the files directly in and out of the folder and that
+        will work also.
+    </p>
+    <p>
+        <em>The default folder location for translation files is /media/simple_translate/</em>
+    </p>
+    <hr />
+    <div class="form-horizontal">
+        <umb-control-group label="Folder" description="location where files are saved">
+            <input type="text" ng-model="vm.settings.folder" class="umb-editor umb-textstring textstring" />
+        </umb-control-group>
+
+        <umb-control-group label="Format" description="Format for extracted files">
+            <select class="umb-dropdown umb-editor"
+                    name="provider"
+                    ng-model="vm.settings.format"
+                    ng-options="i.value as i.name for i in pvm.formats"></select>
+        </umb-control-group>
+    </div>
+</div>

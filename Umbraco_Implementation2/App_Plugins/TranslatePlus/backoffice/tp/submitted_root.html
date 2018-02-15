@@ -1,0 +1,51 @@
+<div ng-controller="translate.submittedRootController as vm"
+    class="translatePlus">
+
+    <form name="pendingRoot" novalidate>
+        <umb-editor-view>
+            <umb-editor-header
+                name="vm.pageTitle"
+                hide-alias = "true"
+                hide-icon = "true"
+                name-locked = "true"
+                hide-description = "true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <translate-app-status></translate-app-status>
+
+                    <h4>Submitted Translations</h4>
+                    <p>
+                        This section contains items that have been 
+                        sent to translation from within Umbraco. 
+                    </p>
+
+                    <div class="summary-boxes">
+                        <div ng-repeat="item in vm.info"
+                            class="summary-box">
+                            <h4>{{item.DisplayName}}</h4>
+                            <div>
+                                <strong>{{item.Count}}</strong> Jobs
+                                <div>
+                                    <a class="btn btn-default" href="#/translatePlus/tp/submitted/{{item.Id}}">
+                                        View
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+            </umb-editor-footer>
+        </umb-editor-view>
+
+    </form>
+
+</div>

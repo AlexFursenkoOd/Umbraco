@@ -1,0 +1,15 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/Translator/services/translatorService.js",
+    "~/App_Plugins/Translator/services/langUserService.js",
+
+    "~/App_Plugins/Translator/backoffice/translator/lang.Controller.js",
+    "~/App_Plugins/Translator/backoffice/translator/job.Controller.js",
+    "~/App_Plugins/Translator/backoffice/translator/detail.Controller.js",
+    "~/App_Plugins/Translator/backoffice/translator/access.Controller.js",
+
+    "~/App_Plugins/Translator/provider/providerView.controller.js",
+    "~/App_Plugins/Translator/dashboard.controller.js"
+  ],
+  "css" : [ "~/App_Plugins/Translator/translator.css" ]
+}

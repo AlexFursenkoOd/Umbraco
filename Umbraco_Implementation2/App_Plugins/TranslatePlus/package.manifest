@@ -1,0 +1,61 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/TranslatePlus/dashboard.Controller.js",
+
+    "~/App_Plugins/TranslatePlus/libs/ng-file-upload-all.js",
+
+    "~/App_Plugins/TranslatePlus/services/cultureService.js",
+    "~/App_Plugins/TranslatePlus/services/jobService.js",
+    "~/App_Plugins/TranslatePlus/services/nodeService.js",
+    "~/App_Plugins/TranslatePlus/services/setService.js",
+    "~/App_Plugins/TranslatePlus/services/fileUploadService.js",
+    "~/App_Plugins/TranslatePlus/services/providerService.js",
+    "~/App_Plugins/TranslatePlus/services/settingsService.js",
+    "~/App_Plugins/TranslatePlus/services/dictionaryService.js",
+
+    "~/App_Plugins/TranslatePlus/backoffice/tp/job.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/item.Controller.js",
+
+    "~/App_Plugins/TranslatePlus/backoffice/tp/pending.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/pending_root.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/received.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/received_root.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/submitted.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/submitted_root.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/archive.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/tp/archive_root.Controller.js",
+
+
+    "~/App_Plugins/TranslatePlus/backoffice/defaultRouteController.js",
+    "~/App_Plugins/TranslatePlus/backoffice/providerConfig.Controller.js",
+
+    "~/App_Plugins/TranslatePlus/backoffice/sets/setEdit.Controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/sets/create.controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/sets/delete.controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/sets/providerConfig.controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/sets/settings.controller.js",
+    "~/App_Plugins/TranslatePlus/backoffice/sets/dictionary.controller.js",
+
+    "~/App_Plugins/TranslatePlus/backoffice/dialogs/sendToTranslate.Controller.js",
+
+    "~/App_Plugins/TranslatePlus/sitepicker/picker.controller.js",
+    "~/App_Plugins/TranslatePlus/sitepicker/pickerDialog.Controller.js",
+
+    "~/App_Plugins/TranslatePlus/directives/itemView.Directive.js",
+    "~/App_Plugins/TranslatePlus/directives/jobView.Directive.js",
+    "~/App_Plugins/TranslatePlus/directives/buildStatus.Directive.js",
+    "~/App_Plugins/TranslatePlus/directives/jobSetup.Directive.js",
+    "~/App_Plugins/TranslatePlus/directives/providerView.Directive.js",
+
+    "~/App_Plugins/TranslatePlus/translateHub.js",
+
+    "~/App_Plugins/TranslatePlus/translateplus.1.1.5.js"
+
+
+  ],
+  "css": [
+    "~/App_Plugins/TranslatePlus/translateplus.css",
+    "~/App_Plugins/TranslatePlus/translate.css"
+
+  ]
+}

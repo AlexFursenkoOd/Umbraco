@@ -1,0 +1,46 @@
+﻿<div class="job-setup-view">
+    <h4>
+        <localize key="translate_createJob">Create translation job</localize>
+    </h4>  
+
+    <div class="control-group">
+        <label for="jobname" class="control-label">Name:</label>
+        <div class="controls">
+            <input type="text" name="jobname" ng-model="job.Name"
+                   class="umb-editor umb-textstring" />
+        </div>
+    </div>
+
+    <div ng-hide="options.singleProvider">
+        <div class="control-group">
+            <label for="provider" class="control-label">
+                <localize key="translate_provider">Provider</localize>
+            </label>
+            <div class="controls">
+                <select class="umb-dropdown umb-editor"
+                        name="provider"
+                        ng-model="job.provider"
+                        ng-options="i as i.Name for i in providers"></select>
+            </div>
+        </div>
+    </div>
+
+    <translate-provider-view job="job"
+                             view="job.Status">
+    </translate-provider-view>
+    
+
+    <div class="control-group">
+        <div class="pending-label" ng-hide="sendto">{{items.length}} Content items</div>
+        <div class="pending-label" ng-show="sendto">Content items</div>
+        <div class="pending-items">
+            <div ng-repeat="item in items" class="pending-item" ng-class="{'muted': item.Generic }">
+                {{item.MasterNodeName}}
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="options.singleProvider">
+        <small><em>using {{job.provider.Name}}</em></small>
+    </div>
+</div>

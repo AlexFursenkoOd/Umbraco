@@ -1,0 +1,33 @@
+﻿<div ng-controller="translateSettingsController as vm">
+    <form name="settingsConfig"           
+          novalidate 
+          val-form-manager>
+        <umb-editor-view>
+            <umb-editor-header name="vm.page.title"
+                               name-locked="true"
+                               hide-icon="true"
+                               hide-alias="true"
+                               description="vm.page.description"
+                               description-locked="true"
+                               tabs="vm.page.tabs">
+
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="">
+                    <umb-tabs-content class="form-horizontal" view="false">
+                        <umb-tab id="tab{{tab.id}}" ng-repeat="tab in vm.page.tabs">
+                            <ng-include src="tab.view" />
+                        </umb-tab>
+                    </umb-tabs-content>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <button type="button" 
+                        ng-click="vm.saveSettings(vm.settings)"
+                        data-hotkey="ctrl-s"
+                        class="btn btn-success">Save</button>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+</div>
+

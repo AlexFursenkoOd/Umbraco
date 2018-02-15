@@ -1,0 +1,45 @@
+﻿<div ng-controller="translate.archiveRootController as vm"
+     class="translatePlus">
+
+    <form name="pendingRoot" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.pageTitle"
+                               hide-alias="true"
+                               hide-icon="true"
+                               name-locked="true"
+                               hide-description="true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <div class="row">
+                        <div class="span6">
+
+                            <translate-app-status></translate-app-status>
+
+                            <h4>
+                                <localize key="translate_archiveTitle">Archived Jobs</localize>
+                            </h4>
+                            <p>
+                                This section contains all the jobs that have
+                                been approved or closed, or have resulted in errors.
+                            </p>
+                            <hr />
+                            <p>
+                                <strong>All archived jobs can be viewed by language from the menu.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+            </umb-editor-footer>
+        </umb-editor-view>
+
+    </form>
+
+</div>

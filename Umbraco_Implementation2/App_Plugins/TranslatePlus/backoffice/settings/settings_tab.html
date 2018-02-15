@@ -1,0 +1,23 @@
+﻿<div class="page-header">
+    <small>
+        Global settings - used across all sets and languages
+    </small>
+</div>
+<umb-control-group label="Translate on Save"
+                   description="Send changes to translate when a user saves or publishes new content">
+    <input type="checkbox" ng-model="vm.settings.AutoTranslate" />
+</umb-control-group>
+
+<umb-control-group label="Background Check"
+                   description="Check status of submitted jobs in background">
+    <input type="checkbox" ng-model="vm.settings.BackgroundCheck" />
+</umb-control-group>
+<umb-control-group label="Check Period"
+                   description="How often (in seconds) to poll providers for job status">
+    <input type="number" ng-model="vm.settings.CheckPeriod" />
+</umb-control-group>
+
+
+<div class="well">
+    These changes will require restart to take effect  
+</div>

@@ -1,0 +1,36 @@
+﻿<form name="createSetDialog"
+      class="translateplus-edit"
+      ng-controller="translateSetCreate.controller as vm">
+    <div class="umb-dialog-body">
+        <div class="umb-pane">
+
+            <h3><localize key="translate_createSet">Create a set</localize></h3>
+            <localize key="translate_createSetMsg">
+                <p>
+                    A Translation set - tells umbraco where the master content is
+                    and where content will be updated once the content is translated
+                </p>
+            </localize>
+
+            <hr/>
+
+            <div class="control-group">
+                <label for="lbname" class="control-label">
+                    Set <localize key="general_name">Name</localize>
+                </label>
+                <div class="control">
+                    <input type="text" name="lbname" ng-model="vm.name" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="umb-dialog-footer btn-toolbar umb-btn-toolbar" ng-hide="vm.success">
+        <a class="btn btn-link" ng-click="nav.hideDialog()" ng-if="!vm.busy">
+            <localize key="general_cancel">Cancel</localize>
+        </a>
+        <button class="btn btn-primary" ng-click="vm.save()" ng-disabled="vm.busy">
+            <localize key="actions_create">Create</localize>
+        </button>
+    </div>
+</form>

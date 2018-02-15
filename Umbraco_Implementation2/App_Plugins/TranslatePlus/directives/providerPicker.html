@@ -1,0 +1,39 @@
+﻿<div class="provider-picker">
+    <h4>Create Translation Job</h4>
+    <div class="control-group">
+        <label for="jobName" class="control-label">Name:</label>
+        <div class="controls">
+            <input type="text" name="jobName" ng-model="settings.name"
+                   class="umb-editor umb-textstring" />
+        </div>
+    </div>
+
+    <div ng-hide="singleProvider">
+        <div class="control-group">
+            <label for="jobProvider" class="control-label">Provider:</label>
+            <div class="controls">
+                <select class="umb-dropdown umb-editor"
+                        name="jobProvider"
+                        ng-model="selectedProvider"
+                        ng-options="i as i.Name for i in providers"
+                        ng-disabled="vm.items.length === 0"></select>
+            </div>
+        </div>
+    </div>
+    <translate-provider-view settings="providerOptions"
+                             provider="selectedProvider"
+                             view="Pending"></translate-provider-view>
+
+    <div class="control-group">
+        <div class="pending-label">{{vm.items.length}} Content Items:</div>
+        <div class="pending-items">
+            <div ng-repeat="item in items" class="pending-item">
+                {{item.MasterNodeName}}
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="singleProvider">
+        <small><em>using {{selectedProvider.Name}}</em></small>
+    </div>
+</div>

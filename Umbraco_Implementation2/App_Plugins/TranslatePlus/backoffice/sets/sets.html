@@ -1,0 +1,50 @@
+﻿<div ng-controller="translate.defaultRouteController as vm"
+     ng-init="vm.page = { title: 'Sets'}">
+    <form name="setRoot" novalidate class="form-horizontal">
+
+        <umb-editor-view>
+            <umb-editor-header name="vm.page.title"
+                               name-locked="true"
+                               hide-alias="true"
+                               hide-description="true"
+                               hide-icon="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <div class="row">
+                        <div class="span6">
+                            <h3>Translation Sets</h3>
+                            <p>
+                                Translation Sets define where the content you want to translate comes from, and where you want it to go once it is translated.
+                            </p>
+                            <p>
+                                A Translation Set has a single master site where all the content in the source language will be stored, and one or more target
+                                sites where the translated values will be sent to.
+                            </p>
+                            <hr />
+                            <h4>Master Site</h4>
+                            <p>
+                                The Master Site is the site where the translated content will come from. This will be the master language in all translations.
+                            </p>
+                            <hr />
+                            <h4>Target Sites</h4>
+                            <p>
+                                Target Sites must have a language set in their 'culture and hostnames' section - this is then used as the target language for
+                                translations.
+                            </p>
+                            <p>
+                                Target Sites are automatically related to the master site
+                                so that Translation Manager knows how to match the content
+                                pages up between the sites.
+                            </p>
+                            <p>
+                                When you first create your Target Site in Umbraco, it is recommended you do this by making a copy of the Master Site.
+                            </p>
+                         </div>
+                    </div>
+                </div>
+            </umb-editor-container>
+
+        </umb-editor-view>
+    </form>
+</div>

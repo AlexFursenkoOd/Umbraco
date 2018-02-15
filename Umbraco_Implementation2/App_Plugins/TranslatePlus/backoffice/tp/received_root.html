@@ -1,0 +1,58 @@
+<div ng-controller="translate.receivedRootController as vm"
+    class="translatePlus">
+
+    <form name="pendingRoot" novalidate>
+        <umb-editor-view>
+            <umb-editor-header
+                name="vm.pageTitle"
+                hide-alias = "true"
+                hide-icon = "true"
+                name-locked = "true"
+                hide-description = "true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <translate-app-status></translate-app-status>
+                    <h4>Received Translations</h4>
+                    <p>
+                        Translations that have come back from the translators.
+                    </p>
+
+                    <div ng-if="vm.info.length > 0">
+                        <div class="summary-boxes">
+                            <div ng-repeat="item in vm.info"
+                                 class="summary-box">
+                                <h4>{{item.DisplayName}}</h4>
+                                <div>
+                                    <strong>{{item.Count}}</strong> Jobs
+                                    <div>
+                                        <a class="btn btn-default" href="#/translatePlus/tp/received/{{item.Id}}">
+                                            View
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="vm.info.length === 0">
+                        <h3>There are no jobs waiting</h3>
+                        <p>
+                            There are no jobs for any of the configured languages. When a 
+                            job arrives, it will appear beneath the relevant language.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+            </umb-editor-footer>
+        </umb-editor-view>
+
+    </form>
+
+</div>

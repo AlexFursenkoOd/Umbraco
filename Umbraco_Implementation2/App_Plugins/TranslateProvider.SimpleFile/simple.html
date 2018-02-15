@@ -1,0 +1,16 @@
+<div ng-controller="translate.XliffPendingController as pvm">
+    <div ng-if="pvm.loaded">
+        <h5>{{pvm.name}} <span ng-if="pvm.formatDefined"> => ({{pvm.format}})</span></h5>
+        <div class="provider-setting-item">
+            <div class="control-group" ng-if="!pvm.formatDefined">
+                <label for="formatPicker" class="control-label">File Format:</label>
+                <div class="controls">
+                    <select class="umb-dropdown"
+                            ng-model="pvm.format"
+                            name="formatPicker"
+                            ng-options="i as i.name for i in pvm.formats"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

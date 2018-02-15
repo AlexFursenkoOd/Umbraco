@@ -1,0 +1,324 @@
+﻿ 2018-02-15 16:14:20,705 [P2204/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on LAPTOP-39DF7N98
+ 2018-02-15 16:14:20,745 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-02-15 16:14:20,769 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 24ms)
+ 2018-02-15 16:14:20,926 [P2204/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-02-15 16:14:20,928 [P2204/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-02-15 16:14:20,935 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:14:21,954 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1019ms)
+ 2018-02-15 16:14:21,954 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-02-15 16:14:21,958 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 3ms)
+ 2018-02-15 16:14:22,005 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:14:22,006 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:14:22,006 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-02-15 16:14:22,010 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 3ms)
+ 2018-02-15 16:14:22,011 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:14:22,017 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 6ms)
+ 2018-02-15 16:14:22,018 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-02-15 16:14:22,025 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 6ms)
+ 2018-02-15 16:14:22,241 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:14:22,242 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:14:22,242 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-02-15 16:14:22,251 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 9ms)
+ 2018-02-15 16:14:22,254 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:14:22,255 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:14:22,255 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-02-15 16:14:22,259 [P2204/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 3ms)
+ 2018-02-15 16:14:25,930 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:25,949 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:26,354 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:26,355 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:27,418 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:27,419 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:28,484 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:28,486 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:29,551 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:29,553 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:30,613 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:30,614 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:31,680 [P2204/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\Fancy\Desktop\Repos\Umbraco\Umbraco_Implementation2\App_Data\Umbraco.sdf ]
+   в System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   в System.Data.SqlServerCe.SqlCeConnection.Open()
+   в Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2018-02-15 16:14:31,681 [P2204/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2018-02-15 16:14:31,692 [P2204/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but Umbraco cannot connect to the database.
+   в Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   в Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   в Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   в Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   в Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2018-02-15 16:14:41,734 [P2204/D2/T6] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-02-15 16:14:41,736 [P2204/D2/T6] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2018-02-15 16:14:41,902 [P2204/D2/T6] INFO  Umbraco.Web.ExamineStartup - Complete (took 165ms)
+ 2018-02-15 16:14:41,902 [P2204/D2/T6] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-02-15 16:15:11,944 [P2204/D2/T7] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: InitializationError
+
+_shutDownMessage=Initialization Error
+HostingEnvironment initiated shutdown
+HostingEnvironment вызвало отключение
+
+_shutDownStack=   в System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   в System.Environment.get_StackTrace()
+   в System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   в System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   в System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   в System.Web.HttpRuntime.AppDomainShutdownTimerCallback(Object state)
+   в System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   в System.Threading.TimerQueueTimer.CallCallback()
+   в System.Threading.TimerQueueTimer.Fire()
+   в System.Threading.TimerQueue.FireNextTimers()
+   в System.Threading.TimerQueue.AppDomainTimerCallback()
+ 2018-02-15 16:25:58,351 [P10052/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on LAPTOP-39DF7N98
+ 2018-02-15 16:25:58,460 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-02-15 16:25:58,505 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 46ms)
+ 2018-02-15 16:25:58,801 [P10052/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-02-15 16:25:58,822 [P10052/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-02-15 16:25:58,826 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:01,058 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 2231ms)
+ 2018-02-15 16:26:01,069 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-02-15 16:26:01,076 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 17ms)
+ 2018-02-15 16:26:01,192 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:01,195 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 3ms)
+ 2018-02-15 16:26:01,198 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-02-15 16:26:01,216 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 18ms)
+ 2018-02-15 16:26:01,217 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:01,218 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1ms)
+ 2018-02-15 16:26:01,219 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-02-15 16:26:01,239 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 20ms)
+ 2018-02-15 16:26:01,322 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:01,323 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:01,323 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-02-15 16:26:01,334 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 10ms)
+ 2018-02-15 16:26:01,339 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:01,339 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:01,340 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-02-15 16:26:01,358 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 18ms)
+ 2018-02-15 16:26:08,830 [P10052/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2018-02-15 16:26:10,825 [P10052/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2018-02-15 16:26:11,151 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:11,152 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1ms)
+ 2018-02-15 16:26:11,153 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2018-02-15 16:26:11,175 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 22ms)
+ 2018-02-15 16:26:12,070 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Initializing database migrations
+ 2018-02-15 16:26:12,075 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:12,076 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:12,076 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Persistence.Migrations.IMigration
+ 2018-02-15 16:26:12,081 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Persistence.Migrations.IMigration (took 4ms)
+ 2018-02-15 16:26:12,819 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationCreateTables' to context
+ 2018-02-15 16:26:12,820 [P10052/D2/T1] INFO  Jumoo.TranslatePlus.Core.Persistance.Migrations.OneZeroZero.MigrationUpgradeJobStatus - Upgrading status (from beta one)
+ 2018-02-15 16:26:12,857 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationUpgradeJobStatus' to context
+ 2018-02-15 16:26:13,702 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationExtendTableInfo' to context
+ 2018-02-15 16:26:14,340 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationTableIndexes' to context
+ 2018-02-15 16:26:14,495 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationAutoSend' to context
+ 2018-02-15 16:26:15,106 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'AddNamesToNodeTable' to context
+ 2018-02-15 16:26:15,257 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationIgnoreDocTypes' to context
+ 2018-02-15 16:26:15,545 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationAddNodeDictionaryFlag' to context
+ 2018-02-15 16:26:15,725 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 1: CREATE TABLE [Translate_Jobs] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[key] UniqueIdentifier NOT NULL CONSTRAINT [DF_Translate_Jobs_key] DEFAULT (NEWID()),
+[name] NVARCHAR(255) NOT NULL,
+[sourceCultureId] INTEGER NOT NULL,
+[targetCultureId] INTEGER NOT NULL,
+[created] DATETIME NOT NULL CONSTRAINT [DF_Translate_Jobs_created] DEFAULT (GETDATE()),
+[submitted] DATETIME NULL,
+[recevied] DATETIME NULL,
+[accepted] DATETIME NULL,
+[status] INTEGER NOT NULL CONSTRAINT [DF_Translate_Jobs_status] DEFAULT ('0'),
+[providerKey] UniqueIdentifier NOT NULL,
+[providerName] NVARCHAR(255) NOT NULL,
+[providerProps] NVARCHAR(2048) NOT NULL,
+[setKey] UniqueIdentifier NULL,
+[translator] NVARCHAR(255) NULL)
+
+ 2018-02-15 16:26:15,751 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 2: ALTER TABLE [Translate_Jobs] ADD CONSTRAINT [PK_Translate_Jobs] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:15,761 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 3: CREATE TABLE [Translate_Sets] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[key] UniqueIdentifier NOT NULL,
+[name] NVARCHAR(255) NOT NULL,
+[master] INTEGER NOT NULL,
+[cultureId] INTEGER NOT NULL,
+[sites] NTEXT NOT NULL,
+[copyOnCreate] BIT NOT NULL,
+[includeNodeName] BIT NOT NULL,
+[properties] NVARCHAR(255) NOT NULL,
+[providerKey] UniqueIdentifier NULL,
+[autoSend] BIT NULL,
+[ignoreDocTypes] NVARCHAR(255) NULL)
+
+ 2018-02-15 16:26:15,789 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 4: ALTER TABLE [Translate_Sets] ADD CONSTRAINT [PK_Translate_Sets] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:15,791 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 5: CREATE UNIQUE NONCLUSTERED INDEX [IX_Translate_Sets_key] ON [Translate_Sets] ([key])
+
+ 2018-02-15 16:26:15,794 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 6: CREATE TABLE [Translate_Properties] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[nodeKey] UniqueIdentifier NOT NULL,
+[alias] NVARCHAR(255) NOT NULL,
+[source] NTEXT NOT NULL,
+[target] NTEXT NOT NULL,
+[sortOrder] INTEGER NOT NULL,
+[group] NVARCHAR(255) NOT NULL)
+
+ 2018-02-15 16:26:15,797 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 7: ALTER TABLE [Translate_Properties] ADD CONSTRAINT [PK_Translate_Properties] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:15,814 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 8: CREATE TABLE [Translate_Nodes] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[key] UniqueIdentifier NOT NULL,
+[setKey] UniqueIdentifier NOT NULL,
+[cultureId] INTEGER NOT NULL,
+[masterId] INTEGER NOT NULL,
+[targetId] INTEGER NOT NULL,
+[status] INTEGER NOT NULL,
+[created] DATETIME NOT NULL,
+[updated] DATETIME NOT NULL,
+[writerId] INTEGER NULL,
+[masterNodeName] NVARCHAR(255) NULL,
+[targetNodeName] NVARCHAR(255) NULL,
+[isDictionary] BIT NULL)
+
+ 2018-02-15 16:26:15,817 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 9: ALTER TABLE [Translate_Nodes] ADD CONSTRAINT [PK_Translate_Nodes] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:15,820 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 10: CREATE UNIQUE NONCLUSTERED INDEX [IX_Translate_Nodes_key] ON [Translate_Nodes] ([key])
+
+ 2018-02-15 16:26:15,830 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 11: CREATE TABLE [Translate_Job_Nodes] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[jobId] INTEGER NOT NULL,
+[nodeId] INTEGER NOT NULL)
+
+ 2018-02-15 16:26:15,834 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 12: ALTER TABLE [Translate_Job_Nodes] ADD CONSTRAINT [PK_Translate_Job_Nodes] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:15,849 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 13: UPDATE TRANSLATE_JOBS SET Status = 15 where status = 2;
+
+ 2018-02-15 16:26:15,851 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 14: UPDATE TRANSLATE_JOBS SET Status = 20 where status = 3;
+
+ 2018-02-15 16:26:15,852 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 15: UPDATE TRANSLATE_JOBS SET Status = 30 where status = 4;
+
+ 2018-02-15 16:26:15,854 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 16: CREATE NONCLUSTERED INDEX [IX_propertyNodeKey] ON [Translate_Properties] ([nodeKey])
+
+ 2018-02-15 16:26:17,580 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:17,581 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:17,583 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2018-02-15 16:26:17,626 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 42ms)
+ 2018-02-15 16:26:18,243 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:18,244 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:18,245 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2018-02-15 16:26:18,269 [P10052/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 24ms)
+ 2018-02-15 16:26:19,320 [P10052/D2/T1] INFO  Jumoo.TranslatePlus.Core.Persistance.Migrations.OneOneZero.MigrateTranslationValues - Migrating And Pending Translations
+ 2018-02-15 16:26:20,532 [P10052/D2/T1] INFO  Jumoo.TranslatePlus.Translator.TranslatorEventHandler - Migration Setup
+ 2018-02-15 16:26:20,541 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Initializing database migrations
+ 2018-02-15 16:26:20,546 [P10052/D2/T1] INFO  Jumoo.TranslatePlus.Translator.Translator - Running Up Migration
+ 2018-02-15 16:26:20,777 [P10052/D2/T1] INFO  Jumoo.TranslatePlus.Translator.Translator - Migration Ran
+ 2018-02-15 16:26:20,778 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Added UPGRADE migration 'MigrationCreateLangUserTable' to context
+ 2018-02-15 16:26:20,956 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 1: CREATE TABLE [Translator_Users] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[userId] INTEGER NOT NULL,
+[nodeId] INTEGER NOT NULL)
+
+ 2018-02-15 16:26:20,961 [P10052/D2/T1] INFO  Umbraco.Core.Persistence.Migrations.MigrationRunner - Executing sql statement 2: ALTER TABLE [Translator_Users] ADD CONSTRAINT [PK_Translator_Users] PRIMARY KEY ([id])
+
+ 2018-02-15 16:26:23,333 [P10052/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2018-02-15 16:26:23,821 [P10052/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2018-02-15 16:26:23,883 [P10052/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 25827ms)
+ 2018-02-15 16:26:25,449 [P10052/D2/T7] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:52225/umbraco
+ 2018-02-15 16:26:25,457 [P10052/D2/T7] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52225/umbraco (UmbracoModule request)
+ 2018-02-15 16:26:27,634 [P10052/D2/T7] INFO  umbraco.content - Load Xml from file...
+ 2018-02-15 16:26:27,645 [P10052/D2/T7] INFO  umbraco.content - Loaded Xml from file.
+ 2018-02-15 16:26:31,158 [P10052/D2/T7] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:26:31,159 [P10052/D2/T7] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:26:31,161 [P10052/D2/T7] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2018-02-15 16:26:31,171 [P10052/D2/T7] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 10ms)
+ 2018-02-15 16:27:28,402 [P10052/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-02-14 16:27:28
+ 2018-02-15 16:27:29,536 [P10052/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:27:29,536 [P10052/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:27:29,537 [P10052/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2018-02-15 16:27:29,541 [P10052/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 4ms)
+ 2018-02-15 16:27:57,268 [P10052/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:27:57,272 [P10052/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 3ms)
+ 2018-02-15 16:27:57,272 [P10052/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-02-15 16:27:57,278 [P10052/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 5ms)
+ 2018-02-15 16:27:57,700 [P10052/D2/T16] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:27:57,701 [P10052/D2/T16] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1ms)
+ 2018-02-15 16:27:57,702 [P10052/D2/T16] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2018-02-15 16:27:57,723 [P10052/D2/T16] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 21ms)
+ 2018-02-15 16:28:36,258 [P10052/D2/T7] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username deniss@exigo.com from IP address ::1
+ 2018-02-15 16:28:36,261 [P10052/D2/T7] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: DenisS@exigo.com logged in from IP address ::1
+ 2018-02-15 16:28:37,022 [P10052/D2/T7] ERROR Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper - Could not validate XSRF token
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The anti-forgery token could not be decrypted. If this application is hosted by a Web Farm or cluster, ensure that all machines are running the same version of ASP.NET Web Pages and that the <machineKey> configuration specifies explicit encryption and validation keys. AutoGenerate cannot be used in a cluster.
+   в System.Web.Helpers.AntiXsrf.AntiForgeryTokenSerializer.Deserialize(String serializedToken)
+   в System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext, String cookieToken, String formToken)
+   в System.Web.Helpers.AntiForgery.Validate(String cookieToken, String formToken)
+   в Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper.ValidateTokens(String cookieToken, String headerToken)
+ 2018-02-15 16:28:37,727 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:28:37,728 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:28:37,729 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2018-02-15 16:28:37,734 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 4ms)
+ 2018-02-15 16:28:37,770 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,772 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,776 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,777 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,779 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,812 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:28:37,815 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 2ms)
+ 2018-02-15 16:28:37,817 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-02-15 16:28:37,817 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2018-02-15 16:28:37,844 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:28:37,844 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-02-15 16:28:37,850 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2018-02-15 16:28:37,857 [P10052/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 7ms)
+ 2018-02-15 16:28:37,903 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,905 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,908 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,910 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:37,912 [P10052/D2/T13] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:38,236 [P10052/D2/T16] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:38,243 [P10052/D2/T16] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:38,255 [P10052/D2/T16] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:38,257 [P10052/D2/T16] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:28:38,261 [P10052/D2/T16] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:36:36,131 [P10052/D2/T33] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-02-15 16:36:36,132 [P10052/D2/T33] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1ms)
+ 2018-02-15 16:36:36,135 [P10052/D2/T33] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.HealthCheck.HealthCheck
+ 2018-02-15 16:36:36,150 [P10052/D2/T33] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.HealthCheck.HealthCheck (took 15ms)
+ 2018-02-15 16:38:42,203 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:38:42,211 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:38:42,212 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:38:42,224 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:38:42,226 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:48:56,314 [P10052/D2/T34] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:48:56,318 [P10052/D2/T34] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:48:56,319 [P10052/D2/T34] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:48:56,321 [P10052/D2/T34] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:48:56,322 [P10052/D2/T34] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 16:51:06,708 [P10052/D2/T33] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home (1)' with Id '1087' has been published.
+ 2018-02-15 16:51:11,159 [P10052/D2/T31] INFO  umbraco.content - Save Xml to file...
+ 2018-02-15 16:51:11,168 [P10052/D2/T31] INFO  umbraco.content - Saved Xml to file.
+ 2018-02-15 17:08:13,862 [P10052/D2/T31] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: deniss@exigo.com, IP Address: ::1
+ 2018-02-15 17:08:31,749 [P10052/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username deniss@exigo.com from IP address ::1
+ 2018-02-15 17:08:31,751 [P10052/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: DenisS@exigo.com logged in from IP address ::1
+ 2018-02-15 17:08:32,230 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:08:32,232 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:08:32,235 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:08:32,238 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:08:32,241 [P10052/D2/T31] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:19:57,872 [P10052/D2/T10] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="0" alias="form" application="forms" title="Forms" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:19:57,877 [P10052/D2/T10] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="false" sortOrder="0" alias="emailTemplates" application="forms" title="Email Templates" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:19:57,881 [P10052/D2/T10] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="2" alias="datasource" application="forms" title="Datasources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:19:57,886 [P10052/D2/T10] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="prevaluesource" application="forms" title="Prevalue sources" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:19:57,887 [P10052/D2/T10] WARN  Umbraco.Core.Services.ApplicationTreeService - The tree definition: <add initialize="true" sortOrder="3" alias="formsecurity" application="users" title="Forms Security" iconClosed="icon-folder" iconOpen="icon-folder-open" type="Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web" /> could not be resolved to a .Net object type
+ 2018-02-15 17:20:54,236 [P10052/D2/T56] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home (Russian)' with Id '1087' has been published.
+ 2018-02-15 17:20:59,546 [P10052/D2/T14] INFO  umbraco.content - Save Xml to file...
+ 2018-02-15 17:20:59,574 [P10052/D2/T14] INFO  umbraco.content - Saved Xml to file.

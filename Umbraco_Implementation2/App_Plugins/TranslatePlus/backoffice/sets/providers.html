@@ -1,0 +1,41 @@
+﻿<div ng-controller="translate.defaultRouteController as vm"
+     ng-init="vm.page = { title: 'Providers'}">
+    <form name="providerRoot" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.page.title"
+                               name-locked="true"
+                               hide-alias="true"
+                               hide-description="true"
+                               hide-icon="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <div class="row">
+                        <div class="span6">
+
+                            <translate-app-status></translate-app-status>
+
+                            <h3>Translation Providers</h3>
+                            <p>
+                                When a translation job is created, the request for the translation is sent to a translation
+                                provider. 
+                            </p>
+                            <p>
+                                Translation providers allow you to push your translations to other third party services, save 
+                                them to disk or use the internal translator section to translate text within Umbraco.
+                            </p>
+                            <p>
+                                You can add additional translation packages via the package installer or NuGet, and you can 
+                                develop your own providers if you need to.
+                            </p>
+                            <hr />
+                            <a class="btn btn-default" href="http://jumoo.co.uk/tp/providers/" target="_blank">Additonal Providers</a>
+                            <a class="btn btn-default" href="http://jumoo.co.uk/tp/docs/" target="_blank">Provider Documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </umb-editor-container>
+
+        </umb-editor-view>
+    </form>
+</div>

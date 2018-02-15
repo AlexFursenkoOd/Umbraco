@@ -1,0 +1,59 @@
+﻿<div ng-hide="vm.settings.Licence.Valid">
+    <div class="alert alert-info">
+        <p>
+            A Licence will allow you to create multiple sets, and multiple translation
+            languages.
+        </p>
+        <p>
+            <small>
+                Developers : If you are running from localhost then everything will work, but to use
+                on a live site you will need a licence to translate more than
+                one language.
+            </small>
+        </p>
+        <p>
+            go <a href="http://jumoo.co.uk/tp/licence/">purchase a licence</a>
+        </p>
+    </div>
+</div>
+
+<div ng-if="vm.settings.Licence.Valid">
+    <div class="alert alert-success">
+        <p>
+            <i class="icon icon-check"></i> Your licence is valid 
+        </p>
+    </div>
+</div>
+<hr />
+<umb-control-group label="Licenced Domains"
+                   description="domains licenced to.">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Licence.Domains" />
+</umb-control-group>
+
+<umb-control-group label="Licence Key"
+                   description="Licence key">
+    <input type="text" class="umb-editor umb-textstring"
+           ng-model="vm.settings.Licence.Key" />
+</umb-control-group>
+
+<div ng-show="vm.settings.Licence.Valid && !vm.settings.Licence.Licenced"
+    class="alert alert-warning">
+    <p>
+        <strong>You licence is valid, but it is not for the current domain</strong>
+    </p>
+    <p>
+        Your licence will work for the specified domain and subdomains 
+        <em>(e.g. example.com, other.example.com)</em> but it will not work for
+        other domains with the same ending <em>(e.g. myexample.com)</em>
+    </p>
+    <p>
+        If you need translations for another site then you will need to <a href="http://jumoo.co.uk/tp/licence/">
+    purchase a new domain licence</a> for that site.
+    </p>
+</div>
+
+<div ng-show="!vm.settings.Licence.Valid && !vm.settings.Licence.Licenced && vm.settings.Licence.Key != null"
+     class="alert alert-danger">
+    Your licence information is not valid
+</div>

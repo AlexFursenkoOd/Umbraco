@@ -1,0 +1,28 @@
+﻿<div ng-controller="translate.jobsArchiveController as vm" class="translatePlus">
+    <form name="translateJobs" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.pageTitle"
+                               hide-alias="true"
+                               description="vm.pageDescription"
+                               description-locked="true"
+                               hide-icon="true"
+                               name-locked="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <div ng-show="vm.jobs.length != 0">
+                        <translate-job-view selectable="false"
+                                            culture="vm.cultureId"
+                                            archived="true">
+                        </translate-job-view>
+                    </div>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-right>
+                    <!-- things you can do with archived jobs ? -->
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+</div>

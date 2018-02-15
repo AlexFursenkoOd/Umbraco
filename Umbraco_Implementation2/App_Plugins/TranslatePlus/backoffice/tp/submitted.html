@@ -1,0 +1,32 @@
+﻿<div ng-controller="translate.jobsSubmittedController as vm" class="translatePlus">
+    <form name="translateJobs" novalidate>
+        <umb-editor-view>
+            <umb-editor-header name="vm.pageTitle"
+                hide-alias="true"
+                description="vm.pageDescription"
+                description-locked="true"
+                hide-icon="true"
+                name-locked="true">
+            </umb-editor-header>
+            <umb-editor-container>
+                <div class="umb-pane">
+                    <translate-job-view selectable="false"
+                                        status-range="vm.statusRange"
+                                        culture="vm.cultureId">
+                    </translate-job-view>
+                </div>
+            </umb-editor-container>
+            <umb-editor-footer>
+                <umb-editor-footer-content-right>
+                    <umb-button action="vm.checkJobs()"
+                                type="button"
+                                button-style="info"
+                                state="vm.checkButtonState"
+                                label-key="translate_check"
+                                disabled="vm.checkButtonState == 'busy'">
+                    </umb-button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+        </umb-editor-view>
+    </form>
+</div>

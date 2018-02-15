@@ -1,0 +1,56 @@
+﻿<div ng-controller="translateDictionaryController as vm">
+
+    <umb-editor-view>
+        <umb-editor-header name="vm.page.title"
+                           name-locked="true"
+                           hide-icon="true"
+                           hide-alias="true"
+                           description="vm.page.description"
+                           description-locked="true"></umb-editor-header>
+        <umb-editor-container>
+
+            <div class="form-horizontal">
+                <umb-control-group label="Set" description="Select the Translation Set">
+                    <select class="umb-dropdown umb-editor"
+                            name="set"
+                            ng-model="vm.selectedSet"
+                            ng-options="set as set.Name for set in vm.sets"></select>
+                </umb-control-group>
+
+                <div ng-if="vm.selectedSet">
+                    <umb-control-group label="Languages" description="Pick the languages to get translated">
+                        <div ng-repeat="site in vm.selectedSet.Sites" class="tp-site-checkbox">
+                            <input type="checkbox" id="chk_{{site.Id}}"
+                                   ng-model="site.checked" />
+                            <label for="chk_{{site.Id}}">
+                                {{site.Culture.DisplayName}}
+                            </label>
+                        </div>
+                    </umb-control-group>
+
+
+                    <umb-control-group label="Dictionary Items" description="Pick the top level dictionary item to translate (all children will be sent translation too)">
+                        <div ng-repeat="item in vm.items" class="tp-site-checkbox">
+                            <input type="checkbox" id="item_chk_{{item.Id}}"
+                                   ng-model="item.checked" />
+                            <label for="item_chk_{{item.Id}}">
+                                {{item.ItemKey}}
+                            </label>
+                        </div>
+                    </umb-control-group>
+
+                </div>
+
+            </div>
+        </umb-editor-container>
+        <umb-editor-footer>
+            <umb-button button-style="success"
+                        label="Send"
+                        type="button"
+                        action="vm.send()"
+                        disabled="!vm.sitesPicked()"></umb-button>
+            </umb-editor-footer>
+    </umb-editor-view>
+
+</div>
+

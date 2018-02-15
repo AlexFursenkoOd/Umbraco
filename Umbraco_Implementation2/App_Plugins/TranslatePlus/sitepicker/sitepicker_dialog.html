@@ -1,0 +1,47 @@
+﻿<div class="umb-panel" ng-controller="translateSitepickerDialog.Controller as vm">
+    <div class="umb-panel-header">
+        Target Sites
+    </div>
+    <div class="umb-panel-body with-footer">
+        <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+        <umb-tree section="{{vm.section}}"
+                  hideheader="true"
+                  hideoptions="true"
+                  isdialog="true"
+                  eventhandler="treeEventHandler"
+                  enablecheckboxes="true">
+        </umb-tree>
+
+        <div class="language-picker-box" ng-if="vm.cultures.length > 0">
+            <umb-control-group label="Target Language"
+                               description="Select the language for this site">
+                <ul class="unstyled">
+                    <li ng-repeat="culture in vm.cultures">
+                        <label class="radio">
+                            <input type="radio" 
+                                   ng-model="vm.site.culture" 
+                                   value="{{culture.LCID}}" />
+                        </label>
+                        {{culture.DisplayName}}
+                    </li>
+                </ul>
+            </umb-control-group>
+        </div>
+    </div>
+
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons">
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+                <button type="button" ng-click="submit(vm.site)" class="btn btn-success"
+                        ng-if="vm.selected">
+                    <localize key="buttons_select">Save</localize>
+                </button>
+
+                <a href ng-click="close()" class="btn btn-link">
+                    <localize key="general_cancel">Cancel</localize>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

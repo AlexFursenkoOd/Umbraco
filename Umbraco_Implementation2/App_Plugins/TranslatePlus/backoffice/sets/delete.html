@@ -1,0 +1,23 @@
+﻿<div class="umb-dialog umb-pane"
+     ng-controller="translate.setDeleteController as vm">
+    <div class="umb-dialog-body">
+        
+        <p class="umb-abstract">
+            <localize key="translate_deleteSet">
+                Are you sure you want to delete ?
+            </localize>
+        </p>
+        <p>
+        <small>
+            [{{vm.id}}] - {{currentNode.name}}
+        </small>
+        </p>
+
+        <umb-confirm 
+            on-confirm="vm.performDelete"
+            on-cancel="vm.cancel">
+        </umb-confirm>
+
+
+    </div>
+</div>
