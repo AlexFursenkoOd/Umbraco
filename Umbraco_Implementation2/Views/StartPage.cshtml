@@ -3,4 +3,16 @@
 @{
 	Layout = null;
 }
-<h1>Hello</h1>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/main.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div style='height:100%; background-image:url(@Umbraco.Media(Int32.Parse(Umbraco.Field("image").ToString())).Url)'>
+    <div class='col-sm-3 col-sm-offset-4' style='background-color:lightgrey; margin-top:15%; border-radius:10px;'>
+        <a href='/@(Model.Content.Site().Children("mainPage").FirstOrDefault(x => x.IsVisible()))' class='btn btn-success col-sm-offset-4 col-sm-4' style='margin-top:15%; margin-bottom:15%'>@umbraco.library.GetDictionaryItem("Home")</a>
+    </div>
+</div>

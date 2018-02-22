@@ -1,12 +1,14 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
 @{
-	var selection = Model.Content.Site().Children()
-						.Where(x => x.IsVisible());
+	var selection = Model.Content.Site().FirstChild("mainPage").Children()
+						.Where(x => x.IsVisible())
+						.OrderBy("Name");
 }
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Exigo template</a>
+      <a class="navbar-brand" href="/home">Exigo template</a>
     </div>
     <ul class="nav navbar-nav">
 	@foreach(var item in selection){
@@ -14,7 +16,7 @@
 			<a href="@item.Url">@item.Name</a>
 		</li>
 	}
-	<a href='/umbraco/#/content'><button class="btn btn-danger navbar-btn">Go to Backoffice</button></a>
+	<a href='/umbraco/#/content'><button class="btn btn-danger navbar-btn">@umbraco.library.GetDictionaryItem("GoToBackoffice")</button></a>
     </ul>
   </div>
 </nav>

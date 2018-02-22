@@ -2,3 +2,24 @@ li .list-group-item.list-group-item-info{
 	cursor: default;
 	text-decoration: none;
 }
+
+.btn.btn-success.col-sm-offset-3.col-sm-6{
+	position: absolute;
+	margin-top:15%;
+}
+
+div.background{
+    background-image:
+}
+
+.passpartout{
+    padding: 30px; /* Ширина паспарту */
+    background: #f0f0f0; /* Цвет фона  паспарту */
+    border: 1px solid #666; /* Параметры рамки */
+    margin-bottom: 30px;
+}
+
+.main-page{
+    margin-right:33.333%;
+    text-align:center
+}

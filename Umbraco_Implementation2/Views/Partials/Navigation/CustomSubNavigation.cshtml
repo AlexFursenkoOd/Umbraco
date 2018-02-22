@@ -1,17 +1,13 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
 @{
-	var selection = Model.Content.Site().Children()
-						.Where(x => x.IsVisible());
+	var selection = Model.Content.Site().FirstChild("mainPage").Children()
+						.Where(x => x.IsVisible())
+						.OrderBy("Name");
 }
 <div class="list-group">
 	@foreach(var item in selection){
-	    if(item.Name == "Salesforce"){
-	        <a class="list-group-item list-group-item-info" href="@item.Url">@item.Name</a>
-        }
-        else{
-            <a class="list-group-item" href="@item.Url">@item.Name</a>
-        }
+        <a class="list-group-item" href="@item.Url">@item.Name</a>
 	}
 </div>
 
